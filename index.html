@@ -888,12 +888,13 @@ function vWork(id){
 /* ───────── 4. 라우팅 ───────── */
 function route(){
   const h=location.hash.replace(/^#\/?/,'').split('/');
-  let html, nav='home', title=SHOW.title;
+  const TT='디자인콘텐츠과 제3회 과제전';
+  let html, nav='home', title='Image Out, Draw the Dream | '+TT;
   const first=Object.keys(SUBJECTS)[0];
   if(!h[0]) html=vHome();
-  else if(h[0]==='grade'){const g=GRADES[h[1]]?h[1]:'1';html=vGrade(g,h[2]);nav='works';title=GRADES[g]+' | '+SHOW.title;}
-  else if(h[0]==='subject'){const k=SUBJECTS[h[1]]?h[1]:first;html=vSubject(k);nav='works';title=SUBJECTS[k].name+' | '+SHOW.title;}
-  else if(h[0]==='work'){const wk=WORKS.find(x=>x.id===h[1]);html=vWork(h[1]);nav=wk?'works':'home';if(wk)title=wk.title+' | '+SHOW.title;}
+  else if(h[0]==='grade'){const g=GRADES[h[1]]?h[1]:'1';html=vGrade(g,h[2]);nav='works';title=GRADES[g]+' | '+TT;}
+  else if(h[0]==='subject'){const k=SUBJECTS[h[1]]?h[1]:first;html=vSubject(k);nav='works';title=SUBJECTS[k].name+' | '+TT;}
+  else if(h[0]==='work'){const wk=WORKS.find(x=>x.id===h[1]);html=vWork(h[1]);nav=wk?'works':'home';if(wk)title=wk.title+' | '+TT;}
   else if(h[0]==='greet'){html=vGreet();nav='greet';title='인사말 | '+SHOW.title;}
   else html=vHome();
   app.innerHTML=html;
@@ -975,6 +976,8 @@ addEventListener('keydown',e=>{
   t&&sc.scrollTo({top:t.offsetTop,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
 });
 addEventListener('hashchange',()=>{closeViewer();route()});
+/* 공유 링크로 처음 들어오면 항상 메인에서 시작 (같은 탭 새로고침은 유지) */
+try{if(!sessionStorage.getItem('kcm-in')){sessionStorage.setItem('kcm-in','1');if(location.hash&&location.hash!=='#/')history.replaceState(null,'',location.pathname+location.search);}}catch(e){}
 route();
 
 
