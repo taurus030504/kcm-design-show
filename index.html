@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="2026.12.22(화) 17:00 동두천시평생교육원. 한국문화영상고등학교 디자인콘텐츠과 1, 2, 3학년의 과제 작품을 모았습니다.">
+<meta name="description" content="2026.12.22(화) 동두천시평생교육원. 한국문화영상고등학교 디자인콘텐츠과 1, 2, 3학년의 과제 작품을 모았습니다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taurus030504.github.io/kcm-design-show/">
 <meta property="og:title" content="Image Out, Draw the Dream | 디자인콘텐츠과 제3회 과제전">
-<meta property="og:description" content="2026.12.22(화) 17:00 동두천시평생교육원">
-<meta property="og:image" content="https://taurus030504.github.io/kcm-design-show/og-cover.jpg">
+<meta property="og:description" content="2026.12.22(화) 동두천시평생교육원">
+<meta property="og:image" content="https://taurus030504.github.io/kcm-design-show/og-image-v3.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="favicon.png">
@@ -173,6 +173,19 @@ main{flex:1;padding-bottom:80px}
 .fx-dl dd{font-size:17px;font-weight:700}.fx-dl small{font-size:14px;font-weight:400;color:var(--ink-2)}
 main:has(.fx-hero){padding-bottom:120px}
 .ft-logos{height:26px;width:auto;margin-top:14px}
+.ft-row{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:28px 48px}
+.ft-l p{margin:0;font-size:14px;font-weight:500;line-height:1.75;color:#d6d6d8}
+.ft-l .ft-logos{display:block;margin:0 0 10px}
+.ft-l a{color:inherit;text-decoration:none}.ft-l a:hover{text-decoration:underline;text-underline-offset:3px}
+.ft-r{display:flex;align-items:flex-start;gap:48px}
+.ft-cr{margin:0;font-size:14px;line-height:1.75;color:#d6d6d8}
+.ft-cr dt{font-weight:700;color:#fff;margin-bottom:10px}
+.ft-cr dd{margin:0;display:flex;gap:24px;color:#d6d6d8}.ft-cr dd span:first-child{font-weight:700;color:#fff}
+.ft-sns{display:flex;gap:16px}
+.ft-sns a{display:grid;place-items:center;width:44px;height:44px;color:#fff;transition:color .2s}
+.ft-sns a:hover{color:#e8622c}
+.ft-sns a:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (max-width:767px){.ft-r{flex-direction:column;gap:20px}.ft-sns{margin-left:-10px}}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ft-logos{background:#fff;padding:6px 10px;border-radius:4px;box-sizing:content-box}}
 :root[data-theme="dark"] .ft-logos{background:#fff;padding:6px 10px;border-radius:4px;box-sizing:content-box}
 
@@ -292,9 +305,9 @@ main:has(.fx-hero){padding-bottom:120px}
 @media (min-width:1100px){
   .body{grid-template-columns:minmax(0,var(--col)) 64px;gap:24px;justify-content:center}
   .rail{display:flex;flex-direction:column;gap:10px;position:sticky;top:84px;align-self:start}
-  .rail button{display:flex;flex-direction:column;align-items:center;gap:4px;width:64px;min-height:64px;padding:10px 0;border:1px solid var(--line);font-size:11px;font-weight:700}
-  .rail button:hover{background:var(--line)}
-  .rail svg{width:20px;height:20px}
+  .rail button{display:flex;align-items:center;gap:8px;min-height:44px;padding:0;border:0;background:none;font-size:13px;font-weight:500;color:var(--ink-2);white-space:nowrap;cursor:pointer}
+  .rail button:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+  .rail svg{width:17px;height:17px}
   .acts{display:none}
 }
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
@@ -330,24 +343,26 @@ main:has(.fx-hero){padding-bottom:120px}
 .car-who img{width:132px;height:132px;border-radius:0;object-fit:cover;object-position:50% 22%;display:block;background:var(--line)}
 .car-who figcaption{font-size:15px;color:var(--ink-2)}.car-who b{color:var(--ink);font-weight:700}
 .qm{width:40px;height:30px;fill:var(--line);flex:none}
-.car-q{font-size:19px;font-weight:700;line-height:1.6;letter-spacing:-.02em;color:var(--ink);text-wrap:pretty;max-width:34em}
+.car-q{font-size:19px;font-weight:700;line-height:1.6;letter-spacing:-.02em;color:var(--ink);word-break:keep-all;text-wrap:balance;max-width:22em}
 .car-more{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;font-size:14px;font-weight:700;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px}
 .car-more:hover{color:var(--ink)}
-.car-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--bg);display:grid;place-items:center;cursor:pointer;z-index:1}
-.car-nav svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.car-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;background:none;display:grid;place-items:center;cursor:pointer;z-index:1}
+.car-nav:hover svg{stroke:var(--org)}
+.car-nav svg{width:26px;height:26px;fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .car-nav:disabled{opacity:.3;cursor:default}
 .car-nav.prev{left:8px}.car-nav.next{right:8px}
 .car-dots{display:flex;justify-content:center;gap:4px;position:absolute;left:0;right:0;bottom:12px}
 .car-dots button{width:28px;height:28px;border:0;background:none;cursor:pointer;display:grid;place-items:center}
-.car-dots button::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink-3);opacity:.35;transition:all .2s}
-.car-dots button[aria-current="true"]::after{opacity:1;background:var(--ink);width:20px;border-radius:4px}
+.car-dots button::after{content:"";width:18px;height:2px;background:var(--ink-3);opacity:.3;transition:opacity .2s}
+.car-dots button[aria-current="true"]::after{opacity:1;background:var(--ink)}
 @media (max-width:767px){.car-nav{top:110px}}
 @media (min-width:768px){
- .car-sl{grid-template-columns:200px minmax(0,1fr);justify-items:start;align-items:center;gap:0 32px;padding:56px 88px 64px;text-align:left}
+ .car-sl{grid-template-columns:200px minmax(0,max-content);justify-content:center;justify-items:start;align-items:center;gap:0 40px;padding:56px 88px 64px;text-align:left}
  .car-who{justify-self:center}
  .car-who img{width:180px;height:180px}
  .qm{width:56px;height:42px;align-self:start;margin-top:8px}
  .car-q{font-size:24px;line-height:1.6}
+ .car-sl > div{align-self:center}
 }
 .gfull{max-width:760px;margin:48px auto 0}
 .gtx h2{font-size:22px;font-weight:900;letter-spacing:-.03em;margin-bottom:20px;display:flex;flex-direction:column;gap:2px}
@@ -650,7 +665,11 @@ html.lock,html.lock body{overflow:hidden}
   </nav>
 </div></header>
 <main id="app" tabindex="-1"></main>
-<footer class="ft"><div class="wrap">2026 한국문화영상고등학교 디자인콘텐츠과 제3회 과제전<br><img class="ft-logos" src="img/type_logos.png" alt="한국문화영상고등학교, 동양대학교" width="900" height="68"></div></footer>
+<footer class="ft"><div class="wrap ft-row">
+<div class="ft-l"><img class="ft-logos" src="img/type_logos.png" alt="한국문화영상고등학교, 동양대학교" width="900" height="68"><p class="ft-c">© 2026 한국문화영상고등학교 디자인콘텐츠과</p><p>경기도 동두천시 평화로2452번길 32</p><p>Tel. <a href="tel:031-860-7300">031-860-7300</a> | Fax. 031-864-0852</p></div>
+<div class="ft-r"><dl class="ft-cr"><dt>한국문화영상고등학교 제3회 과제전</dt><dd><span>웹디자인 및 개발</span><span>황현정</span></dd></dl>
+<nav class="ft-sns" aria-label="바로가기"><a href="https://www.instagram.com/kcmschool.official/" target="_blank" rel="noopener" aria-label="한국문화영상고등학교 공식 인스타그램"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://kcm-h.goedy.kr/kcm-h/main.do" target="_blank" rel="noopener" aria-label="한국문화영상고등학교 홈페이지"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v9h14v-9"/><path d="M10 19v-5h4v5"/></svg></a></nav></div>
+</div></footer>
 <div class="vw" id="vw" role="dialog" aria-modal="true" aria-label="전체 화면">
   <div class="vw-bar"><span class="vw-ct" id="vw-ct"></span><button class="vw-x" id="vw-x">닫기</button></div>
   <div class="vw-sc" id="vw-sc" tabindex="-1"></div>
@@ -709,7 +728,7 @@ function sbHero(list,k,t,i){
   const bg=[...list,...list,...list].slice(0,12);
   return `<section class="sb-hero" aria-labelledby="sb-t">
       <div class="sb-bg" aria-hidden="true">${bg.map(w=>`<img src="${w.sq.replace('sq.jpg','tn.jpg')}" alt="" decoding="async">`).join('')}</div>
-      <div class="sb-in"><p class="sb-k">${esc(k)}</p><h1 id="sb-t">${esc(t)}</h1><p class="sb-i">${i.map(esc).join('<br>')}</p></div>
+      <div class="sb-in">${k?`<p class="sb-k">${esc(k)}</p>`:''}<h1 id="sb-t">${esc(t)}</h1><p class="sb-i">${i.map(esc).join('<br>')}</p></div>
     </section>`;
 }
 function gTabs(g,k){
@@ -732,12 +751,12 @@ function vGrade(g,sid){
   const subs=subsOf(g), all=BYNO.filter(x=>SUBJECTS[x.subject].grade==g);
   const st=sid&&S(sid);
   if(st){const ws=BYNO.filter(w=>w.student===sid);
-    return `${sbHero(all,'2026 디자인콘텐츠과',GRADES[g],GINTRO[g])}${gTabs(g)}${fbar(g,st)}
+    return `${sbHero(all,'',GRADES[g],GINTRO[g])}${gTabs(g)}${fbar(g,st)}
     <div class="wrap"><ul class="grid fgrid">${ws.map(w=>card(w,g)).join('')}</ul></div>${MV==='2'?idx(g):''}`;}
   const body=MV==='3'?`<div class="wrap">${pairs(g)}</div>`:`<div class="wrap">${subs.map(s=>{const v=SUBJECTS[s],list=BYNO.filter(x=>x.subject===s);
       return `<section class="gs" id="g-${s}" aria-labelledby="gh-${s}"><header class="gs-h"><div><h2 id="gh-${s}">${esc(v.name)}</h2><p>${esc(v.course)}</p></div><a href="#/subject/${s}">과목 소개 보기</a></header>
       ${list.length?`<ul class="grid">${list.map(w=>card(w,g)).join('')}</ul>`:`<p class="empty">준비 중</p>`}</section>`}).join('')}</div>`;
-  return `${sbHero(all,'2026 디자인콘텐츠과',GRADES[g],GINTRO[g])}
+  return `${sbHero(all,'',GRADES[g],GINTRO[g])}
     ${gTabs(g)}${body}${MV==='2'?idx(g):''}`;
 }
 function vSubject(k){
@@ -757,7 +776,6 @@ function vHome(){
         <h1 id="fx-t" class="fx-type"><img class="b1" src="${SHOW.type}" alt="이미지에서 나와 꿈을 그리기까지, Image Out, Draw the Dream" width="1800" height="2000" decoding="async" fetchpriority="high"><img class="b2" src="${SHOW.type}" alt="" aria-hidden="true"><img class="b3" src="${SHOW.type}" alt="" aria-hidden="true"></h1>
         <div class="fx-info">
           <p class="fx-date">${esc(SHOW.date)}<small>(${esc(SHOW.day)})</small></p>
-          <p class="fx-time">관람 시간 ${esc(SHOW.time)}부터</p>
           <p class="fx-place">${esc(SHOW.place)}</p>
           <p class="fx-addr">${esc(SHOW.addr)}</p>
           <a class="fx-go" href="#/grade/1">전시작품 보기</a>
@@ -800,7 +818,7 @@ function carousel(gs,home){
 }
 const roleT=g=>g.role==='교장'||g.role==='교감'?g.role+'선생님':g.role+' 선생님';
 const fr=n=>String(n+1).padStart(2,'0')+'A';
-function gHead(){return `<section class="sb-hero gh-hero" aria-labelledby="sb-t"><img class="gh-bg" src="img/greet-school.jpg" alt="" aria-hidden="true"><div class="sb-in"><p class="sb-k">${esc(SHOW.title)}</p><h1 id="sb-t">인사말</h1></div></section>`}
+function gHead(){return `<section class="sb-hero gh-hero" aria-labelledby="sb-t"><img class="gh-bg" src="img/greet-school.jpg" alt="" aria-hidden="true"><div class="sb-in"><h1 id="sb-t">인사말</h1></div></section>`}
 function vGreet(){
   const gs=SHOW.greets.filter(x=>x.body.length), v='d';
   const body=g=>g.body.map(p=>`<p>${esc(p)}</p>`).join('');
@@ -1015,6 +1033,383 @@ let raf=0;const up=()=>{raf=0;const t=document.querySelector('.fx-track'),h=t&&t
   set('--p',p);set('--l1',ein(cl(p/.55)));set('--l2',ein(cl((p-.1)/.55)));set('--l3',ein(cl((p-.2)/.55)));set('--k',eio(cl((p-.05)/.8)));set('--d',cl((p-.62)/.38));};
 addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(up)},{passive:true});addEventListener('resize',up);addEventListener('hashchange',()=>setTimeout(up,60));up();})();
 
+</script>
+<style>
+/* 시안 패널 */
+.cmp{position:fixed;left:16px;bottom:16px;z-index:9999;background:#141416;color:#fff;padding:12px 14px;display:grid;gap:8px;font:500 13px/1.4 "Noto Sans KR",system-ui,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.25);max-width:calc(100vw - 32px)}
+.cmp p{color:#b8b8bd;font-size:12px}
+.cmp div{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.cmp b{width:64px;font-size:12px;color:#d6d6d8}
+.cmp button{font:700 13px/1 inherit;font-family:inherit;padding:9px 12px;border:1px solid #3a3a3e;background:none;color:#d6d6d8;cursor:pointer}
+.cmp button[aria-pressed="true"]{background:#fff;color:#111;border-color:#fff}
+/* 커서 공통 */
+@media (pointer:fine){
+ html.cur-p,html.cur-p *,html.cur-o,html.cur-o *{cursor:none!important}
+}
+.cu{position:fixed;left:0;top:0;z-index:9998;pointer-events:none;display:none}
+html.cur-p .cu-p,html.cur-o .cu-o{display:block}
+@media (pointer:coarse){.cu{display:none!important}}
+/* C 펜툴 */
+.cu-p{width:28px;height:28px;margin:0;transform-origin:0 0}
+.cu-p svg{display:block;width:100%;height:100%;overflow:visible}
+.cu-p .pl{opacity:0;transition:opacity .15s}
+.cu-p.lk .pl{opacity:1}
+/* D 주황 반투명 */
+.cu-o{width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:rgba(232,98,44,.45);transition:width .25s cubic-bezier(.2,.8,.2,1),height .25s cubic-bezier(.2,.8,.2,1),margin .25s cubic-bezier(.2,.8,.2,1),background .25s}
+.cu-o.lk{width:44px;height:44px;margin:-22px 0 0 -22px;background:rgba(232,98,44,.3)}
+.cu-o.wk{width:72px;height:72px;margin:-36px 0 0 -36px;background:rgba(232,98,44,.28)}
+.cu-o.dn{width:16px;height:16px;margin:-8px 0 0 -8px;background:rgba(232,98,44,.6)}
+/* A 선린식 화살표 */
+.cu-a{width:30px;height:34px;margin:-17px 0 0 -15px;transition:scale .2s}
+.cu-a svg{display:block;width:100%;height:100%;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
+.cu-a.lk{scale:1.35}
+/* B 꿈 점과 고리 */
+.cu-d{width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:#e8622c}
+.cu-b{width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1.5px solid #1d2a6b;display:grid;place-items:center;transition:width .3s cubic-bezier(.2,.8,.2,1),height .3s cubic-bezier(.2,.8,.2,1),margin .3s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s}
+.cu-b span{font:700 14px/1 "Noto Sans KR",sans-serif;white-space:nowrap;color:#fff;opacity:0;transition:opacity .2s}
+.cu-b.lk{width:46px;height:46px;margin:-23px 0 0 -23px;border-color:#e8622c}
+.cu-b.wk{width:84px;height:84px;margin:-42px 0 0 -42px;background:#e8622c;border-color:#e8622c}
+.cu-b.wk span{opacity:1}
+html.cur-b .cu-d.hide{opacity:0}
+</style>
+<div class="cu cu-p" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M1 1 L6 15 L11 20 L20 11 L15 6 Z" fill="#111" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 1 L8.2 8.2" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/><circle cx="9" cy="9" r="1.7" fill="#fff"/><path d="M12 22 L22 12 L26 16 L16 26 Z" fill="#111" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><g class="pl"><path d="M21 3h6M24 0v6" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M21 3h6M24 0v6" stroke="#e8622c" stroke-width="2" stroke-linecap="round"/></g></svg></div>
+<div class="cu cu-o" aria-hidden="true"></div>
+<script>
+(function(){
+const H=document.documentElement,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let CUR='a',MOT=true;
+/* ---------- 커서 ---------- */
+const _d=document.createElement('i'),ca=_d,cb=_d.cloneNode(),cd=_d.cloneNode(),cp=document.querySelector('.cu-p'),co=document.querySelector('.cu-o');let ox=-100,oy=-100;
+addEventListener('pointerdown',()=>co.classList.add('dn'));addEventListener('pointerup',()=>co.classList.remove('dn'));
+let mx=-100,my=-100,px=-100,py=-100,ang=-22,tang=-22,bx=-100,by=-100,idle=0;
+addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;mx=e.clientX;my=e.clientY;idle=0;
+ const t=e.target.closest&&e.target.closest('a,button,[role=button]');
+ const w=t&&t.querySelector&&t.querySelector('img')&&!t.closest('.hd,header,nav,.cmp,footer');
+ ca.classList.toggle('lk',!!t);cb.classList.toggle('lk',!!t&&!w);cb.classList.toggle('wk',!!w);cd.classList.toggle('hide',!!w);cp.classList.toggle('lk',!!t);co.classList.toggle('lk',!!t&&!w);co.classList.toggle('wk',!!w);},{passive:true});
+document.addEventListener('pointerleave',()=>{mx=my=-100});
+function loop(){
+ const dx=mx-px,dy=my-py,sp=Math.hypot(dx,dy);
+ if(sp>2){tang=Math.atan2(dy,dx)*180/Math.PI+90}else if(++idle>18){tang=-22}
+ let d=((tang-ang+540)%360)-180;ang+=d*.18;px=mx;py=my;
+ ca.style.transform=`translate(${mx}px,${my}px) rotate(${ang}deg)`;
+ cd.style.transform=`translate(${mx}px,${my}px)`;
+ bx+=(mx-bx)*.2;by+=(my-by)*.2;cb.style.transform=`translate(${bx}px,${by}px)`;
+ cp.style.transform=`translate(${mx}px,${my}px)`;ox+=(mx-ox)*.35;oy+=(my-oy)*.35;co.style.transform=`translate(${ox}px,${oy}px)`;
+ requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+function setC(c){CUR=c;H.classList.remove('cur-a','cur-b','cur-p','cur-o');if(c)H.classList.add('cur-'+c);
+ document.querySelectorAll('.cmp [data-c]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.c===c));}
+/* ---------- 하프톤 키비주얼 ---------- */
+const SRC=new Image();SRC.src='img/key.jpg';let DOTS=null,W=0,Hh=0;
+SRC.onload=()=>{const S=4,w=640,h=Math.round(w*SRC.height/SRC.width),c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.drawImage(SRC,0,0,w,h);let D;try{D=x.getImageData(0,0,w,h).data}catch(e){return}
+ const out=[];for(let j=S/2;j<h;j+=S)for(let i=S/2+((j/S|0)%2?S/2:0);i<w;i+=S){let r=0,g=0,b=0,n=0;for(let yy=-2;yy<=2;yy++)for(let xx=-2;xx<=2;xx++){const X=Math.min(w-1,Math.max(0,i+xx|0)),Y=Math.min(h-1,Math.max(0,j+yy|0)),k=(Y*w+X)*4;r+=D[k];g+=D[k+1];b+=D[k+2];n++}
+  r/=n;g/=n;b/=n;const lum=(.3*r+.59*g+.11*b)/255,dk=1-lum;if(dk<.06)continue;
+  const org=r-b>40;out.push([i/w,j/h,dk,org?1:0]);}
+ DOTS=out;W=w;Hh=h;document.querySelectorAll('canvas.fx-kv').forEach(start);};
+const runs=new Set();
+function swap(){if(!MOT)return;document.querySelectorAll('img.fx-kv').forEach(img=>{const cv=document.createElement('canvas');cv.className=img.className;cv.setAttribute('aria-hidden','true');cv.dataset.src=img.getAttribute('src');img.replaceWith(cv);if(DOTS)start(cv);});}
+function unswap(){document.querySelectorAll('canvas.fx-kv').forEach(cv=>{const img=new Image();img.className=cv.className;img.src=cv.dataset.src;img.alt='';cv.replaceWith(img);});}
+function start(cv){if(cv._on)return;cv._on=1;const ctx=cv.getContext('2d');let mxl=-9999,myl=-9999,t0=performance.now();
+ let DX=0,DY=0,DW=1,DH=1;const size=()=>{const dpr=Math.min(2,devicePixelRatio||1);const mob=innerWidth<768;if(mob){cv.style.width='';const r=cv.getBoundingClientRect();cv.width=r.width*dpr;cv.height=r.height*dpr;const s=Math.max(cv.width/SRC.width,cv.height/SRC.height);DW=SRC.width*s;DH=SRC.height*s;DX=(cv.width-DW)*.7;DY=(cv.height-DH);}else{const r=cv.getBoundingClientRect();const hgt=r.height||cv.parentElement.clientHeight;const wid=hgt*SRC.width/SRC.height;cv.width=wid*dpr;cv.height=hgt*dpr;cv.style.width=wid+'px';DX=0;DY=0;DW=cv.width;DH=cv.height;}};
+ size();addEventListener('resize',size);
+ let vx=0,vy=0,lx=-9999,ly=-9999,amp=0;addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();const nx=(e.clientX-r.left)/r.width,ny=(e.clientY-r.top)/r.height;if(lx>-999){vx+=(nx-lx)*1.0;vy+=(ny-ly)*1.0;}lx=nx;ly=ny;mxl=nx;myl=ny;},{passive:true});
+ function draw(now){if(!cv.isConnected){return}if(document.documentElement.classList.contains('pv-on')){requestAnimationFrame(draw);return}
+  const t=(now-t0)/1000,cw=cv.width,ch=cv.height,cell=DW/(W/4);ctx.clearRect(0,0,cw,ch);ctx.globalAlpha=.35;ctx.filter='blur('+(cw/90)+'px)';ctx.drawImage(SRC,DX,DY,DW,DH);ctx.filter='none';ctx.globalAlpha=1;
+  const asp=DH/DW;
+  for(const c of [0,1]){ctx.fillStyle=c?'#e8622c':'#1d2a6b';ctx.beginPath();
+   for(const d of DOTS){if(d[3]!==c)continue;let x=d[0],y=d[1];
+    const wv=RM?1:1+.28*Math.sin(t*1.4-x*10-y*7);
+    let rad=Math.sqrt(d[2])*cell*.62*wv;
+    if(!RM){const dx=x-mxl,dy=(y-myl)*asp,dd=Math.hypot(dx,dy),R0=.22;if(dd<R0){const f=(1-dd/R0)**2;x+=dx/(dd||1)*f*.04;y+=dy/(dd||1)*f*.04/asp;rad*=1+f*.8;}}
+    const X=DX+x*DW,Y=DY+y*DH;ctx.moveTo(X+rad,Y);ctx.arc(X,Y,rad,0,6.283);}
+   ctx.fill();}
+  if(!RM||!cv._drawn){cv._drawn=1;requestAnimationFrame(draw);} }
+ requestAnimationFrame(draw);}
+new MutationObserver(()=>{if(MOT)swap();}).observe(document.body,{childList:true,subtree:true});
+function setM(m){MOT=m;document.querySelectorAll('.cmp [data-m]').forEach(b=>b.setAttribute('aria-pressed',(b.dataset.m==='1')===m));if(m)swap();else unswap();}
+
+setC('p');setM(true);
+
+/* ---------- 제목 글자 꿀렁 ---------- */
+(function(){if(RM)return;
+ const R=170,S=2*R,mc=document.createElement('canvas');mc.width=mc.height=S;const g=mc.getContext('2d'),id=g.createImageData(S,S);
+ for(let y=0;y<S;y++)for(let x=0;x<S;x++){const dx=(x-R)/R,dy=(y-R)/R,d=Math.hypot(dx,dy),k=(y*S+x)*4;let v=d<1?Math.pow(1-d,2)*Math.sin(Math.min(1,d*3)*Math.PI/2):0;const nx=d?dx/d:0,ny=d?dy/d:0;
+  id.data[k]=128-nx*v*127;id.data[k+1]=128-ny*v*127;id.data[k+2]=128;id.data[k+3]=255;}
+ g.putImageData(id,0,0);const MAP=mc.toDataURL();
+ const NS='http://www.w3.org/2000/svg',sv=document.createElementNS(NS,'svg');sv.setAttribute('width','0');sv.setAttribute('height','0');sv.style.position='absolute';sv.setAttribute('aria-hidden','true');
+ sv.innerHTML=`<filter id="tyBulge" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-color="rgb(128,128,128)" result="n"/><feImage id="tyMap" href="${MAP}" x="0" y="0" width="${S}" height="${S}" preserveAspectRatio="none" result="m0"/><feComposite in="m0" in2="n" operator="over" result="m1"/><feGaussianBlur in="m1" stdDeviation="8" result="m"/><feDisplacementMap id="tyDisp" in="SourceGraphic" in2="m" scale="0" xChannelSelector="R" yChannelSelector="G"/></filter>`;
+ document.body.append(sv);const fi=sv.querySelector('#tyMap'),fd=sv.querySelector('#tyDisp');
+ let mx=-1e4,my=-1e4,cur=0,tgt=0,t0=performance.now(),on=false;
+ addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
+ (function loop(now){const el=document.querySelector('.fx-type');
+  if(el){const r=el.getBoundingClientRect();const inside=mx>r.left-R*.5&&mx<r.right+R*.5&&my>r.top-R*.5&&my<r.bottom+R*.5;
+   tgt=inside?1:0;cur+=(tgt-cur)*.08;
+   if(cur>.01){if(!on){el.style.filter='url(#tyBulge)';on=true}
+    const sc=r.width/el.offsetWidth||1;fi.setAttribute('x',(mx-r.left)/sc-R);fi.setAttribute('y',(my-r.top)/sc-R);
+    const t=(now-t0)/1000;fd.setAttribute('scale',(55+14*Math.sin(t*5))*cur);}
+   else if(on){el.style.filter='';on=false}}
+  requestAnimationFrame(loop)})(t0);
+})();
+
+})();
+</script>
+<style>
+.pv{position:fixed;inset:0;z-index:9500;background:#fff;transition:background-color .6s}
+.pv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pv .stg{position:absolute;inset:0;will-change:transform}
+.pv .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(29,42,107,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(29,42,107,.06) 1px,transparent 1px);transition:opacity .6s}
+.pv .pen{position:absolute;left:0;top:0;width:28px;height:28px;transform-origin:0 0;will-change:transform}
+.pv .skip{position:absolute;right:clamp(16px,3vw,40px);bottom:clamp(20px,5vh,56px);min-height:44px;padding:0 18px;border:1px solid #141416;background:#fff;color:#141416;font:700 14px/1 "Noto Sans KR",sans-serif;cursor:pointer;z-index:3}
+html.pv-on,html.pv-on body{overflow:hidden}
+html.pv-keep .fx-hero .fx-type img{animation:none!important}
+.pv-pre{position:fixed;inset:0;z-index:9499;background:#fff}
+html.pv-on .fx-hero .fx-type,html.pv-on .fx-hero .fx-kv,html.pv-on .fx-hero .fx-info,html.pv-on .fx-hero .fx-cap{visibility:hidden}
+
+</style>
+<script>
+(function(){
+const PD=[{"d":"M82 780L82 776L72 776L62 776L62 485L62 194L72 194L82 194L82 190L82 187L41 187L0 187L0 190L0 194L10 194L20 194L20 485L20 776L10 776L0 776L0 779C0 781 0 783 1 783C1 784 19 784 41 784L82 784L82 780Z","L":1436,"a":[[82,776,0.0026,null,null],[62,776,0.0166,null,null],[62,194,0.4219,null,null],[82,194,0.4359,null,null],[82,187,0.4407,null,null],[0,187,0.4979,null,null],[0,194,0.5027,null,null],[20,194,0.5167,null,null],[20,776,0.922,null,null],[0,776,0.9359,null,null],[1,783,0.9411,null,null],[82,784,0.9974,null,null]]},{"d":"M137 780L137 776L127 776L116 776L116 696C116 633 116 615 117 614C118 613 118 613 117 612C116 612 116 575 116 433C116 334 116 254 117 255C117 255 118 262 119 269C119 276 121 297 123 315C126 347 134 431 141 506C142 527 145 554 146 564C147 576 149 591 149 598C149 606 150 616 151 620C151 625 155 661 158 700C162 740 165 775 166 778L167 784L173 784L179 784L179 779C183 750 196 604 196 596C196 589 196 585 197 585C198 585 204 517 214 419C222 328 230 254 230 254C230 254 230 262 230 271C230 281 230 379 229 489C228 599 228 709 227 733L227 776L217 776L207 776L207 780L208 784L269 784L330 784L330 780L330 776L319 776L308 776L308 772C309 770 313 721 319 663L328 558L355 558L382 558L384 580C385 592 390 640 394 686C398 731 402 770 402 772L403 776L391 776L380 776L380 780L380 784L424 784L468 784L468 780L468 776L457 776L445 776L445 771C444 768 442 745 440 720C437 695 429 610 421 530C413 451 403 342 397 287L387 188L373 187L359 187L359 191C358 194 354 235 349 284C345 333 335 431 329 503C322 575 313 665 309 702C306 740 303 773 302 774C302 776 302 776 285 776L269 776L269 485L269 194L279 194L289 194L289 190L289 187L260 187L230 187L230 192C229 198 191 597 191 599C191 600 191 600 190 599C189 599 188 587 186 573C184 549 172 413 160 282C156 248 153 214 152 206C152 197 151 189 151 188C151 187 147 187 121 187L91 187L91 190L91 194L101 194L111 194L111 485L111 776L101 776L91 776L91 780L91 784L114 784L136 784L137 780Z","L":6451,"a":[[137,776,0.0006,null,null],[116,776,0.0039,null,null],[117,255,0.0848,null,null],[167,784,0.1672,null,null],[179,784,0.1691,null,null],[230,254,0.2517,null,null],[227,776,0.3326,null,null],[207,776,0.3357,null,null],[208,784,0.3368,null,null],[330,784,0.3559,null,null],[330,776,0.357,null,null],[308,776,0.3605,null,null],[328,558,0.3944,null,null],[382,558,0.4027,null,null],[403,776,0.4366,null,null],[380,776,0.4402,null,null],[380,784,0.4413,null,null],[468,784,0.4548,null,null],[468,776,0.456,null,null],[445,776,0.4595,null,null],[387,188,0.5512,null,null],[359,187,0.5556,null,null],[302,774,0.647,null,null],[269,776,0.6523,null,null],[269,194,0.7425,null,null],[289,194,0.7456,null,null],[289,187,0.7467,null,null],[230,187,0.7558,null,null],[191,599,0.82,null,null],[190,599,0.8203,null,null],[151,188,0.8843,null,null],[91,187,0.8936,null,null],[91,194,0.8947,null,null],[111,194,0.8978,null,null],[111,776,0.988,null,null],[91,776,0.9911,null,null],[91,784,0.9924,null,null],[136,784,0.9994,null,null]]},{"d":"M568 782C575 778 583 769 587 760C593 746 593 756 593 605L593 469L562 469L532 469L532 472L532 476L542 476L552 476L552 627L552 778L543 778C532 778 527 776 522 770C516 760 516 784 516 486C516 218 516 216 518 211C522 199 529 194 539 194L545 194L546 199C547 204 556 252 575 350C580 376 584 397 584 398C585 398 585 351 585 293L585 187L545 187L504 188L499 190C492 194 484 203 480 211C473 226 474 205 474 489L474 746L477 753C482 767 493 780 504 783C507 785 513 785 535 785L562 784L568 782Z","L":2519,"a":[[593,469,0.1274,null,null],[532,469,0.1516,null,null],[532,476,0.1544,null,null],[552,476,0.1621,null,null],[552,778,0.2816,null,null],[522,770,0.2944,null,null],[518,211,0.5168,null,null],[545,194,0.5306,null,null],[584,398,0.6129,null,null],[585,187,0.6965,null,null],[480,211,0.7422,null,null],[504,783,0.9741,null,null]]},{"d":"M754 684C754 629 754 585 754 585C753 586 744 631 723 732C720 749 716 766 716 770L714 776L698 776L682 776L682 628L682 480L691 480L701 480L713 524C720 547 725 567 726 567C726 567 726 526 726 476C726 426 726 385 725 386C725 387 719 407 712 430L701 472L691 472L682 472L682 333L682 194L697 194L712 194L730 289C741 341 750 384 750 384C751 385 751 341 751 286L751 187L686 187L620 187L620 190L620 194L630 194L640 194L640 485L640 776L630 776L620 776L620 780L620 784L687 784L754 784L754 684Z","L":2720,"a":[[754,585,0.0364,null,null],[714,776,0.1078,null,null],[682,776,0.1197,null,null],[682,480,0.2286,null,null],[701,480,0.2354,null,null],[726,567,0.2687,null,null],[725,386,0.3352,null,null],[701,472,0.3681,null,null],[682,472,0.3749,null,null],[682,194,0.4771,null,null],[712,194,0.488,null,null],[750,384,0.5594,null,null],[751,187,0.632,null,null],[620,187,0.6802,null,null],[620,194,0.6828,null,null],[640,194,0.6901,null,null],[640,776,0.9041,null,null],[620,776,0.9114,null,null],[620,784,0.9144,null,null],[754,784,0.9634,null,null]]},{"d":"M904 790C911 786 911 790 911 705C911 631 911 628 909 625C905 619 903 618 890 618C876 618 872 620 869 625L866 628L866 703C866 751 866 779 867 782C868 787 873 791 878 792C885 794 900 793 904 790Z","L":413,"a":[[909,625,0.4065,null,null],[866,628,0.5258,null,null],[867,782,0.8975,null,null],[878,792,0.9352,null,null],[904,790,1.0,null,null]]},{"d":"M960 787C962 783 964 780 965 779C966 776 967 778 967 785C968 793 968 793 977 793C985 792 987 791 980 790L976 790L976 732L976 674L967 674C959 674 955 676 962 677L966 677L966 725L966 773L962 779C956 789 954 791 950 790C948 789 946 788 946 787C945 786 944 766 944 730L944 674L935 674C926 674 922 676 929 677L933 677L933 727C933 754 933 778 934 780C936 788 942 793 950 793C955 793 955 793 960 787Z","L":593,"a":[[965,779,0.0154,null,null],[977,793,0.0568,null,null],[980,790,0.0771,null,null],[976,790,0.0839,null,null],[976,674,0.2794,null,null],[962,677,0.3163,null,null],[966,677,0.3222,null,null],[950,790,0.5257,null,null],[946,787,0.5344,null,null],[944,674,0.7247,null,null],[929,677,0.7618,null,null],[933,677,0.7678,null,null],[934,780,0.9421,null,null],[950,793,0.9797,null,null]]},{"d":"M1024 792C1024 791 1021 790 1018 790C1008 789 1009 793 1009 731L1009 677L1016 677C1021 677 1022 677 1022 676C1022 674 1021 674 1016 674L1009 674L1009 657L1008 640L1002 657C995 676 995 677 998 677C999 677 999 683 999 729C999 786 999 786 1005 790C1009 793 1024 794 1024 792Z","L":361,"a":[[1018,790,0.0158,null,null],[1009,677,0.3443,null,null],[1022,676,0.3821,null,null],[1009,674,0.4198,null,null],[1008,640,0.5154,null,null],[1005,790,0.9455,null,null],[1024,792,1.0,null,null]]},{"d":"M1047 797C1053 786 1059 775 1060 773L1062 770L1055 770L1048 770L1042 792C1039 804 1036 815 1035 816C1034 820 1037 814 1047 797Z","L":118,"a":[[1062,770,0.2614,null,null],[1048,770,0.379,null,null],[1035,816,0.7837,null,null]]},{"d":"M551 1222C562 1220 570 1214 575 1203L578 1198L578 1030L578 862L575 857C571 850 567 845 561 841L556 838L507 838C458 838 458 838 458 840C458 842 459 842 467 842L476 842L476 1030L476 1218L467 1218C458 1218 458 1218 458 1220L458 1223L502 1223C527 1223 548 1223 551 1222Z","L":1015,"a":[[458,840,0.4973,null,null],[476,842,0.5161,null,null],[476,1218,0.8866,null,null],[458,1220,0.9059,null,null],[458,1223,0.9083,null,null]]},{"d":"M736 1880C753 1876 768 1864 776 1849L780 1840L781 1584C781 1409 781 1326 780 1323C777 1310 768 1297 755 1289C750 1286 749 1284 748 1281C748 1279 738 1234 726 1180C714 1127 702 1071 699 1055L692 1026L699 1026C714 1024 725 1015 729 1001C731 992 731 869 728 861C725 851 718 843 708 840C704 838 697 838 656 838C610 838 609 838 609 840C609 842 610 842 618 842L628 842L628 1030L628 1218L619 1218C610 1218 610 1219 610 1220C610 1222 610 1223 641 1223L673 1223L673 1221C673 1218 673 1218 664 1218L655 1218L655 1122L655 1026L659 1026L662 1026L703 1154C726 1225 744 1283 744 1283C743 1283 741 1283 739 1282C736 1281 721 1280 658 1280L580 1280L580 1284L580 1288L594 1288L609 1288L609 1581L609 1874L596 1874L582 1874L582 1878L582 1881L656 1881C706 1881 733 1881 736 1880Z","L":3157,"a":[[692,1026,0.2831,null,null],[729,1001,0.2984,null,null],[728,861,0.3427,null,null],[708,840,0.3524,null,null],[609,840,0.384,null,null],[628,842,0.3903,null,null],[628,1218,0.5094,null,null],[610,1220,0.5156,null,null],[673,1223,0.536,null,null],[673,1221,0.5368,null,null],[655,1218,0.543,null,null],[655,1026,0.6039,null,null],[662,1026,0.6063,null,null],[744,1283,0.6914,null,null],[580,1280,0.7431,null,null],[580,1288,0.7455,null,null],[609,1288,0.7547,null,null],[609,1874,0.9404,null,null],[582,1874,0.9489,null,null],[582,1881,0.9511,null,null]]},{"d":"M782 1220C782 1219 781 1218 771 1218C764 1218 761 1218 761 1217C761 1216 765 1184 770 1146L779 1077L808 1077C823 1077 836 1077 836 1078C836 1078 840 1109 846 1147C851 1185 855 1216 855 1217C855 1218 852 1218 844 1218C834 1218 834 1218 834 1220L834 1222L869 1223L904 1223L904 1221L904 1218L894 1218C888 1218 883 1218 883 1217C883 1217 871 1132 856 1028C842 924 830 839 830 839C830 838 825 838 819 838L808 838L803 869C783 1020 756 1214 755 1216C755 1218 754 1218 747 1218C739 1218 739 1218 739 1221L739 1223L760 1223C781 1223 782 1222 782 1220Z","L":1332,"a":[[761,1217,0.0165,null,null],[779,1077,0.1223,null,null],[836,1078,0.1648,null,null],[855,1217,0.2701,null,null],[834,1220,0.2872,null,null],[834,1222,0.2889,null,null],[904,1223,0.3411,null,null],[904,1218,0.3448,null,null],[883,1217,0.3606,null,null],[830,839,0.6478,null,null],[808,838,0.6648,null,null],[755,1216,0.9511,null,null],[739,1221,0.9655,null,null],[739,1223,0.9674,null,null],[782,1220,1.0,null,null]]},{"d":"M959 1222C959 1220 985 998 985 995C985 993 985 992 986 992C987 992 987 993 987 995C987 998 1014 1220 1015 1222C1015 1223 1027 1224 1027 1222C1027 1222 1041 1106 1062 927C1067 881 1072 843 1072 842C1072 842 1076 842 1082 842C1090 842 1091 842 1091 840C1091 838 1090 838 1070 838C1049 838 1048 838 1048 840C1048 842 1049 842 1057 842C1062 842 1066 842 1066 843C1067 843 1065 858 1063 876C1061 893 1053 961 1045 1025C1037 1090 1031 1143 1031 1144C1030 1144 1030 1137 1029 1129C1028 1120 1020 1053 1012 978C1003 904 996 843 997 843C997 842 1002 842 1008 842C1017 842 1018 842 1018 840C1018 838 1017 838 993 838L967 838L968 841C968 843 979 931 982 960C983 969 983 973 975 1036C971 1073 966 1111 965 1122C964 1133 962 1142 962 1142C962 1143 960 1126 957 1105C951 1049 929 854 928 848L928 842L938 842C947 842 948 842 948 840C948 838 947 838 913 838C879 838 878 838 878 840C878 842 879 842 889 842L899 842L902 864C904 877 907 903 909 924C939 1166 946 1221 946 1222C946 1224 958 1223 959 1222Z","L":2743,"a":[[986,992,0.0845,null,null],[1015,1222,0.1689,null,null],[1027,1222,0.1736,null,null],[1072,842,0.3131,null,null],[1091,840,0.3205,null,null],[1048,840,0.3368,null,null],[1066,843,0.3439,null,null],[1031,1144,0.4544,null,null],[997,843,0.5648,null,null],[1018,840,0.573,null,null],[967,838,0.5919,null,null],[962,1142,0.7036,null,null],[928,842,0.8137,null,null],[948,840,0.8215,null,null],[878,840,0.8476,null,null],[899,842,0.8558,null,null],[946,1222,0.9953,null,null],[959,1222,1.0,null,null]]},{"d":"M1202 1228C1202 1227 1199 1226 1196 1226C1193 1226 1191 1225 1189 1224L1187 1222L1187 1166L1187 1111L1194 1111C1202 1111 1202 1109 1194 1109C1191 1109 1188 1109 1188 1109C1187 1109 1187 1101 1187 1091C1187 1081 1187 1073 1186 1073C1186 1074 1173 1109 1173 1110C1173 1111 1174 1111 1174 1111C1176 1111 1176 1117 1176 1163C1176 1199 1176 1216 1177 1218C1179 1223 1183 1227 1186 1228C1190 1229 1202 1229 1202 1228Z","L":366,"a":[[1187,1222,0.0442,null,null],[1187,1111,0.3464,null,null],[1194,1111,0.3641,null,null],[1194,1109,0.3984,null,null],[1188,1109,0.4161,null,null],[1186,1073,0.5139,null,null],[1173,1110,0.6212,null,null],[1174,1111,0.6264,null,null],[1177,1218,0.9198,null,null],[1186,1228,0.9581,null,null],[1202,1228,1.0,null,null]]},{"d":"M1232 1228C1232 1226 1231 1226 1228 1226L1225 1226L1225 1177L1225 1128L1228 1123C1236 1112 1238 1110 1243 1112C1248 1113 1248 1115 1248 1172L1248 1226L1244 1226C1242 1226 1240 1227 1240 1228C1240 1229 1243 1229 1253 1229C1266 1229 1271 1227 1262 1226L1258 1226L1258 1173C1258 1123 1258 1119 1256 1116C1253 1111 1250 1109 1243 1108C1237 1108 1235 1109 1229 1118L1226 1123L1225 1087L1225 1051L1215 1051C1208 1051 1206 1051 1206 1052C1206 1053 1208 1054 1210 1054L1214 1054L1214 1140L1214 1226L1210 1226C1208 1226 1206 1227 1206 1228C1206 1229 1209 1229 1219 1229C1230 1229 1232 1229 1232 1228Z","L":750,"a":[[1225,1226,0.0103,null,null],[1243,1112,0.1766,null,null],[1248,1226,0.3309,null,null],[1240,1228,0.3418,null,null],[1262,1226,0.3843,null,null],[1258,1226,0.39,null,null],[1256,1116,0.5367,null,null],[1243,1108,0.5576,null,null],[1226,1123,0.5913,null,null],[1225,1051,0.6879,null,null],[1206,1052,0.7135,null,null],[1214,1054,0.7244,null,null],[1214,1226,0.9534,null,null],[1206,1228,0.9644,null,null],[1232,1228,1.0,null,null]]},{"d":"M1323 1205C1323 1192 1323 1182 1322 1183C1322 1184 1320 1194 1318 1205L1313 1226L1304 1226C1296 1226 1295 1226 1292 1224L1290 1221L1290 1193L1290 1165L1307 1165L1324 1164L1323 1142C1323 1117 1323 1115 1317 1111C1311 1107 1291 1107 1286 1111C1280 1116 1280 1116 1280 1170C1280 1222 1279 1221 1286 1226C1290 1229 1291 1229 1308 1229L1323 1229L1323 1205Z","L":448,"a":[[1322,1183,0.0498,null,null],[1313,1226,0.1467,null,null],[1292,1224,0.195,null,null],[1290,1165,0.3278,null,null],[1324,1164,0.4026,null,null],[1317,1111,0.5273,null,null],[1286,1111,0.5985,null,null],[1286,1226,0.8625,null,null],[1323,1229,0.947,null,null]]},{"d":"M1009 1784C990 1668 975 1573 976 1573C976 1573 978 1572 980 1572C986 1571 999 1563 1005 1558C1012 1552 1016 1545 1020 1536L1022 1530L1023 1430C1023 1359 1023 1329 1022 1324C1018 1305 1000 1287 979 1282C975 1281 958 1280 898 1280L822 1280L822 1284L822 1288L836 1288L851 1288L851 1581L851 1874L836 1874L822 1874L822 1878L822 1881L880 1881L939 1881L939 1878L939 1874L925 1874L911 1874L911 1724C911 1636 911 1574 912 1575C912 1575 932 1637 954 1712C977 1786 1004 1871 1012 1900C1021 1930 1032 1963 1035 1974C1039 1986 1042 1995 1042 1994C1042 1994 1027 1899 1009 1784Z","L":2469,"a":[[976,1573,0.0863,null,null],[1022,1324,0.1967,null,null],[979,1282,0.2225,null,null],[822,1280,0.2859,null,null],[822,1288,0.289,null,null],[851,1288,0.3007,null,null],[851,1874,0.5381,null,null],[822,1874,0.5499,null,null],[822,1881,0.5527,null,null],[939,1881,0.6001,null,null],[939,1874,0.6029,null,null],[911,1874,0.6143,null,null],[912,1575,0.7356,null,null],[1042,1994,0.9136,null,null]]},{"d":"M1250 1781C1250 1722 1249 1682 1249 1683C1248 1685 1235 1729 1199 1854L1193 1874L1170 1874L1146 1874L1146 1724L1146 1575L1160 1575L1174 1576L1191 1619C1201 1643 1209 1663 1209 1664C1210 1664 1210 1623 1210 1572L1210 1478L1205 1490C1202 1497 1194 1517 1187 1535L1174 1568L1160 1568L1146 1568L1146 1428L1146 1288L1168 1288L1190 1288L1217 1384C1232 1436 1245 1480 1245 1480C1246 1481 1246 1437 1246 1381L1246 1280L1152 1280L1058 1280L1057 1284L1057 1288L1071 1288L1086 1288L1086 1581L1086 1874L1072 1874L1057 1874L1057 1878L1057 1881L1154 1881L1250 1881L1250 1781Z","L":2938,"a":[[1249,1683,0.0333,null,null],[1193,1874,0.1008,null,null],[1146,1874,0.117,null,null],[1146,1575,0.2188,null,null],[1174,1576,0.2282,null,null],[1209,1664,0.2605,null,null],[1210,1478,0.3235,null,null],[1174,1568,0.3562,null,null],[1146,1568,0.3656,null,null],[1146,1288,0.4609,null,null],[1190,1288,0.4757,null,null],[1245,1480,0.5439,null,null],[1246,1280,0.612,null,null],[1058,1280,0.676,null,null],[1057,1288,0.6785,null,null],[1086,1288,0.6885,null,null],[1086,1874,0.8879,null,null],[1057,1874,0.8978,null,null],[1057,1881,0.9002,null,null],[1250,1881,0.9659,null,null]]},{"d":"M1331 1878L1331 1874L1315 1874L1299 1874L1299 1872C1299 1870 1326 1665 1328 1657L1328 1654L1367 1654C1388 1654 1405 1654 1405 1655C1405 1656 1408 1681 1425 1800C1430 1840 1435 1873 1435 1873C1435 1874 1428 1874 1418 1874L1402 1874L1402 1878L1402 1881L1491 1881L1580 1881L1580 1878L1580 1874L1566 1874L1551 1874L1551 1611C1551 1458 1552 1349 1552 1350C1553 1352 1560 1409 1569 1476C1578 1543 1592 1653 1601 1719C1610 1785 1618 1849 1620 1860L1622 1881L1632 1881L1641 1881L1641 1878C1642 1876 1650 1818 1659 1750C1668 1681 1680 1598 1684 1566C1688 1535 1697 1474 1702 1431C1708 1388 1713 1352 1714 1350C1715 1347 1715 1413 1713 1612C1712 1676 1712 1760 1711 1800L1710 1874L1696 1874L1682 1874L1682 1878L1682 1881L1741 1881L1800 1880L1800 1877L1800 1874L1786 1874L1771 1874L1771 1581L1771 1288L1785 1288L1800 1288L1800 1284L1800 1280L1757 1280L1715 1280L1713 1290C1713 1294 1705 1350 1696 1413C1663 1663 1657 1703 1656 1704C1656 1704 1656 1704 1656 1703C1656 1702 1648 1645 1614 1384C1607 1331 1601 1285 1600 1283L1600 1280L1557 1280L1514 1280L1514 1284L1514 1288L1528 1288L1542 1288L1542 1581L1542 1874L1519 1874C1506 1874 1496 1874 1496 1873C1496 1873 1489 1823 1480 1762C1472 1701 1460 1613 1453 1566C1446 1519 1436 1442 1429 1395C1422 1348 1416 1303 1415 1296C1414 1288 1413 1281 1412 1281C1412 1279 1373 1280 1372 1281C1372 1282 1369 1302 1321 1654C1304 1773 1291 1871 1290 1872C1290 1874 1290 1874 1277 1874L1265 1874L1265 1878L1265 1881L1298 1881L1331 1881L1331 1878Z","L":6787,"a":[[1331,1874,0.0005,null,null],[1299,1874,0.0052,null,null],[1328,1654,0.0379,null,null],[1405,1655,0.0493,null,null],[1435,1873,0.0818,null,null],[1402,1874,0.0867,null,null],[1402,1881,0.0877,null,null],[1580,1881,0.1139,null,null],[1580,1874,0.1149,null,null],[1551,1874,0.1192,null,null],[1552,1350,0.1963,null,null],[1622,1881,0.2752,null,null],[1641,1881,0.2779,null,null],[1714,1350,0.3568,null,null],[1710,1874,0.4339,null,null],[1682,1874,0.4381,null,null],[1682,1881,0.4391,null,null],[1800,1880,0.4564,null,null],[1800,1874,0.4574,null,null],[1771,1874,0.4617,null,null],[1771,1288,0.548,null,null],[1800,1288,0.5522,null,null],[1800,1280,0.5533,null,null],[1715,1280,0.5658,null,null],[1656,1704,0.6287,null,null],[1600,1280,0.6918,null,null],[1514,1280,0.7045,null,null],[1514,1288,0.7056,null,null],[1542,1288,0.7098,null,null],[1542,1874,0.7961,null,null],[1496,1873,0.8029,null,null],[1412,1281,0.891,null,null],[1372,1281,0.897,null,null],[1290,1872,0.9848,null,null],[1265,1874,0.9887,null,null],[1265,1881,0.9898,null,null],[1331,1881,0.9995,null,null]]}];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,H=document.documentElement,NS='http://www.w3.org/2000/svg',BL='#2f6bff';
+const PEN='<svg viewBox="0 0 28 28" width="28" height="28" style="overflow:visible"><path d="M1 1 L6 15 L11 20 L20 11 L15 6 Z" fill="#111" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 1 L8.2 8.2" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/><circle cx="9" cy="9" r="1.7" fill="#fff"/><path d="M12 22 L22 12 L26 16 L16 26 Z" fill="#111" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+const E={o:x=>1-Math.pow(1-x,3),i:x=>x*x*x,io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,i2:x=>x*x};
+
+
+let live=null;
+function play(){
+ if(live)live.kill();const hero=document.querySelector('.fx-hero'),ti=hero&&hero.querySelector('.fx-type img');if(!ti)return;
+ scrollTo(0,0);H.classList.add('pv-on');
+ const ov=document.createElement('div');ov.className='pv';ov.setAttribute('role','dialog');ov.setAttribute('aria-label','인트로');
+ ov.innerHTML='<div class="grid"></div><svg aria-hidden="true"><g class="cam"><path class="fill" fill="#231f20" fill-rule="evenodd" opacity="0"/><g class="ln"></g><g class="hd"></g><g class="an"></g></g></svg><div class="pen" aria-hidden="true">'+PEN+'</div><button class="skip" type="button">건너뛰기</button>';
+ document.body.append(ov);document.querySelectorAll('.pv-pre').forEach(e=>e.remove());const esc=e=>{if(e.key==='Escape'){removeEventListener('keydown',esc);end(true)}};addEventListener('keydown',esc);
+ const stg=document.createElement('div');stg.className='stg';ov.prepend(stg);['.grid','svg','.pen'].forEach(s=>stg.append(ov.querySelector(s)));
+ const cam=ov.querySelector('.cam'),gL=ov.querySelector('.ln'),gH=ov.querySelector('.hd'),gA=ov.querySelector('.an'),fill=ov.querySelector('.fill'),pen=ov.querySelector('.pen'),grid=ov.querySelector('.grid');
+ fill.setAttribute('d',"M82 780L82 776L72 776L62 776L62 485L62 194L72 194L82 194L82 190L82 187L41 187L0 187L0 190L0 194L10 194L20 194L20 485L20 776L10 776L0 776L0 779C0 781 0 783 1 783C1 784 19 784 41 784L82 784L82 780ZM137 780L137 776L127 776L116 776L116 696C116 633 116 615 117 614C118 613 118 613 117 612C116 612 116 575 116 433C116 334 116 254 117 255C117 255 118 262 119 269C119 276 121 297 123 315C126 347 134 431 141 506C142 527 145 554 146 564C147 576 149 591 149 598C149 606 150 616 151 620C151 625 155 661 158 700C162 740 165 775 166 778L167 784L173 784L179 784L179 779C183 750 196 604 196 596C196 589 196 585 197 585C198 585 204 517 214 419C222 328 230 254 230 254C230 254 230 262 230 271C230 281 230 379 229 489C228 599 228 709 227 733L227 776L217 776L207 776L207 780L208 784L269 784L330 784L330 780L330 776L319 776L308 776L308 772C309 770 313 721 319 663L328 558L355 558L382 558L384 580C385 592 390 640 394 686C398 731 402 770 402 772L403 776L391 776L380 776L380 780L380 784L424 784L468 784L468 780L468 776L457 776L445 776L445 771C444 768 442 745 440 720C437 695 429 610 421 530C413 451 403 342 397 287L387 188L373 187L359 187L359 191C358 194 354 235 349 284C345 333 335 431 329 503C322 575 313 665 309 702C306 740 303 773 302 774C302 776 302 776 285 776L269 776L269 485L269 194L279 194L289 194L289 190L289 187L260 187L230 187L230 192C229 198 191 597 191 599C191 600 191 600 190 599C189 599 188 587 186 573C184 549 172 413 160 282C156 248 153 214 152 206C152 197 151 189 151 188C151 187 147 187 121 187L91 187L91 190L91 194L101 194L111 194L111 485L111 776L101 776L91 776L91 780L91 784L114 784L136 784L137 780ZM568 782C575 778 583 769 587 760C593 746 593 756 593 605L593 469L562 469L532 469L532 472L532 476L542 476L552 476L552 627L552 778L543 778C532 778 527 776 522 770C516 760 516 784 516 486C516 218 516 216 518 211C522 199 529 194 539 194L545 194L546 199C547 204 556 252 575 350C580 376 584 397 584 398C585 398 585 351 585 293L585 187L545 187L504 188L499 190C492 194 484 203 480 211C473 226 474 205 474 489L474 746L477 753C482 767 493 780 504 783C507 785 513 785 535 785L562 784L568 782ZM754 684C754 629 754 585 754 585C753 586 744 631 723 732C720 749 716 766 716 770L714 776L698 776L682 776L682 628L682 480L691 480L701 480L713 524C720 547 725 567 726 567C726 567 726 526 726 476C726 426 726 385 725 386C725 387 719 407 712 430L701 472L691 472L682 472L682 333L682 194L697 194L712 194L730 289C741 341 750 384 750 384C751 385 751 341 751 286L751 187L686 187L620 187L620 190L620 194L630 194L640 194L640 485L640 776L630 776L620 776L620 780L620 784L687 784L754 784L754 684ZM330 545C330 543 333 514 336 482C349 341 354 281 355 281C355 282 356 287 362 358C366 389 371 446 375 482C378 519 381 549 381 550C381 550 369 550 355 550L329 550L330 545ZM904 790C911 786 911 790 911 705C911 631 911 628 909 625C905 619 903 618 890 618C876 618 872 620 869 625L866 628L866 703C866 751 866 779 867 782C868 787 873 791 878 792C885 794 900 793 904 790ZM880 788C879 787 878 785 878 784C877 783 877 745 877 701L878 620L886 621C894 621 896 622 898 623L900 625L900 708L900 790L891 790C883 790 882 790 880 788ZM960 787C962 783 964 780 965 779C966 776 967 778 967 785C968 793 968 793 977 793C985 792 987 791 980 790L976 790L976 732L976 674L967 674C959 674 955 676 962 677L966 677L966 725L966 773L962 779C956 789 954 791 950 790C948 789 946 788 946 787C945 786 944 766 944 730L944 674L935 674C926 674 922 676 929 677L933 677L933 727C933 754 933 778 934 780C936 788 942 793 950 793C955 793 955 793 960 787ZM1024 792C1024 791 1021 790 1018 790C1008 789 1009 793 1009 731L1009 677L1016 677C1021 677 1022 677 1022 676C1022 674 1021 674 1016 674L1009 674L1009 657L1008 640L1002 657C995 676 995 677 998 677C999 677 999 683 999 729C999 786 999 786 1005 790C1009 793 1024 794 1024 792ZM1047 797C1053 786 1059 775 1060 773L1062 770L1055 770L1048 770L1042 792C1039 804 1036 815 1035 816C1034 820 1037 814 1047 797ZM551 1222C562 1220 570 1214 575 1203L578 1198L578 1030L578 862L575 857C571 850 567 845 561 841L556 838L507 838C458 838 458 838 458 840C458 842 459 842 467 842L476 842L476 1030L476 1218L467 1218C458 1218 458 1218 458 1220L458 1223L502 1223C527 1223 548 1223 551 1222ZM503 1030L504 842L517 842C538 842 545 844 549 854C551 858 551 863 551 1032L550 1206L548 1210C543 1217 539 1218 520 1218L503 1218L503 1030ZM736 1880C753 1876 768 1864 776 1849L780 1840L781 1584C781 1409 781 1326 780 1323C777 1310 768 1297 755 1289C750 1286 749 1284 748 1281C748 1279 738 1234 726 1180C714 1127 702 1071 699 1055L692 1026L699 1026C714 1024 725 1015 729 1001C731 992 731 869 728 861C725 851 718 843 708 840C704 838 697 838 656 838C610 838 609 838 609 840C609 842 610 842 618 842L628 842L628 1030L628 1218L619 1218C610 1218 610 1219 610 1220C610 1222 610 1223 641 1223L673 1223L673 1221C673 1218 673 1218 664 1218L655 1218L655 1122L655 1026L659 1026L662 1026L703 1154C726 1225 744 1283 744 1283C743 1283 741 1283 739 1282C736 1281 721 1280 658 1280L580 1280L580 1284L580 1288L594 1288L609 1288L609 1581L609 1874L596 1874L582 1874L582 1878L582 1881L656 1881C706 1881 733 1881 736 1880ZM655 932L656 842L672 842C690 842 692 843 696 847C703 853 703 850 703 934L702 1009L700 1013C695 1020 691 1021 672 1021L655 1021L655 932ZM782 1220C782 1219 781 1218 771 1218C764 1218 761 1218 761 1217C761 1216 765 1184 770 1146L779 1077L808 1077C823 1077 836 1077 836 1078C836 1078 840 1109 846 1147C851 1185 855 1216 855 1217C855 1218 852 1218 844 1218C834 1218 834 1218 834 1220L834 1222L869 1223L904 1223L904 1221L904 1218L894 1218C888 1218 883 1218 883 1217C883 1217 871 1132 856 1028C842 924 830 839 830 839C830 838 825 838 819 838L808 838L803 869C783 1020 756 1214 755 1216C755 1218 754 1218 747 1218C739 1218 739 1218 739 1221L739 1223L760 1223C781 1223 782 1222 782 1220ZM780 1069C781 1067 787 1023 794 970C805 887 808 869 808 875C808 876 814 920 822 973C829 1026 835 1070 835 1071C835 1072 826 1072 807 1072L780 1072L780 1069ZM959 1222C959 1220 985 998 985 995C985 993 985 992 986 992C987 992 987 993 987 995C987 998 1014 1220 1015 1222C1015 1223 1027 1224 1027 1222C1027 1222 1041 1106 1062 927C1067 881 1072 843 1072 842C1072 842 1076 842 1082 842C1090 842 1091 842 1091 840C1091 838 1090 838 1070 838C1049 838 1048 838 1048 840C1048 842 1049 842 1057 842C1062 842 1066 842 1066 843C1067 843 1065 858 1063 876C1061 893 1053 961 1045 1025C1037 1090 1031 1143 1031 1144C1030 1144 1030 1137 1029 1129C1028 1120 1020 1053 1012 978C1003 904 996 843 997 843C997 842 1002 842 1008 842C1017 842 1018 842 1018 840C1018 838 1017 838 993 838L967 838L968 841C968 843 979 931 982 960C983 969 983 973 975 1036C971 1073 966 1111 965 1122C964 1133 962 1142 962 1142C962 1143 960 1126 957 1105C951 1049 929 854 928 848L928 842L938 842C947 842 948 842 948 840C948 838 947 838 913 838C879 838 878 838 878 840C878 842 879 842 889 842L899 842L902 864C904 877 907 903 909 924C939 1166 946 1221 946 1222C946 1224 958 1223 959 1222ZM1202 1228C1202 1227 1199 1226 1196 1226C1193 1226 1191 1225 1189 1224L1187 1222L1187 1166L1187 1111L1194 1111C1202 1111 1202 1109 1194 1109C1191 1109 1188 1109 1188 1109C1187 1109 1187 1101 1187 1091C1187 1081 1187 1073 1186 1073C1186 1074 1173 1109 1173 1110C1173 1111 1174 1111 1174 1111C1176 1111 1176 1117 1176 1163C1176 1199 1176 1216 1177 1218C1179 1223 1183 1227 1186 1228C1190 1229 1202 1229 1202 1228ZM1232 1228C1232 1226 1231 1226 1228 1226L1225 1226L1225 1177L1225 1128L1228 1123C1236 1112 1238 1110 1243 1112C1248 1113 1248 1115 1248 1172L1248 1226L1244 1226C1242 1226 1240 1227 1240 1228C1240 1229 1243 1229 1253 1229C1266 1229 1271 1227 1262 1226L1258 1226L1258 1173C1258 1123 1258 1119 1256 1116C1253 1111 1250 1109 1243 1108C1237 1108 1235 1109 1229 1118L1226 1123L1225 1087L1225 1051L1215 1051C1208 1051 1206 1051 1206 1052C1206 1053 1208 1054 1210 1054L1214 1054L1214 1140L1214 1226L1210 1226C1208 1226 1206 1227 1206 1228C1206 1229 1209 1229 1219 1229C1230 1229 1232 1229 1232 1228ZM1323 1205C1323 1192 1323 1182 1322 1183C1322 1184 1320 1194 1318 1205L1313 1226L1304 1226C1296 1226 1295 1226 1292 1224L1290 1221L1290 1193L1290 1165L1307 1165L1324 1164L1323 1142C1323 1117 1323 1115 1317 1111C1311 1107 1291 1107 1286 1111C1280 1116 1280 1116 1280 1170C1280 1222 1279 1221 1286 1226C1290 1229 1291 1229 1308 1229L1323 1229L1323 1205ZM1290 1136L1290 1111L1299 1111C1307 1111 1308 1111 1311 1113L1313 1116L1313 1139L1313 1162L1302 1162L1290 1162L1290 1136ZM669 1581L669 1288L682 1288C700 1288 704 1289 712 1297C722 1307 721 1276 721 1583L720 1852L718 1858C711 1870 705 1873 684 1874L669 1874L669 1581ZM1009 1784C990 1668 975 1573 976 1573C976 1573 978 1572 980 1572C986 1571 999 1563 1005 1558C1012 1552 1016 1545 1020 1536L1022 1530L1023 1430C1023 1359 1023 1329 1022 1324C1018 1305 1000 1287 979 1282C975 1281 958 1280 898 1280L822 1280L822 1284L822 1288L836 1288L851 1288L851 1581L851 1874L836 1874L822 1874L822 1878L822 1881L880 1881L939 1881L939 1878L939 1874L925 1874L911 1874L911 1724C911 1636 911 1574 912 1575C912 1575 932 1637 954 1712C977 1786 1004 1871 1012 1900C1021 1930 1032 1963 1035 1974C1039 1986 1042 1995 1042 1994C1042 1994 1027 1899 1009 1784ZM911 1427L911 1288L926 1288C947 1289 954 1292 960 1305L962 1310L962 1428L962 1546L960 1550C954 1563 945 1567 924 1567L911 1567L911 1427ZM1250 1781C1250 1722 1249 1682 1249 1683C1248 1685 1235 1729 1199 1854L1193 1874L1170 1874L1146 1874L1146 1724L1146 1575L1160 1575L1174 1576L1191 1619C1201 1643 1209 1663 1209 1664C1210 1664 1210 1623 1210 1572L1210 1478L1205 1490C1202 1497 1194 1517 1187 1535L1174 1568L1160 1568L1146 1568L1146 1428L1146 1288L1168 1288L1190 1288L1217 1384C1232 1436 1245 1480 1245 1480C1246 1481 1246 1437 1246 1381L1246 1280L1152 1280L1058 1280L1057 1284L1057 1288L1071 1288L1086 1288L1086 1581L1086 1874L1072 1874L1057 1874L1057 1878L1057 1881L1154 1881L1250 1881L1250 1781ZM1331 1878L1331 1874L1315 1874L1299 1874L1299 1872C1299 1870 1326 1665 1328 1657L1328 1654L1367 1654C1388 1654 1405 1654 1405 1655C1405 1656 1408 1681 1425 1800C1430 1840 1435 1873 1435 1873C1435 1874 1428 1874 1418 1874L1402 1874L1402 1878L1402 1881L1491 1881L1580 1881L1580 1878L1580 1874L1566 1874L1551 1874L1551 1611C1551 1458 1552 1349 1552 1350C1553 1352 1560 1409 1569 1476C1578 1543 1592 1653 1601 1719C1610 1785 1618 1849 1620 1860L1622 1881L1632 1881L1641 1881L1641 1878C1642 1876 1650 1818 1659 1750C1668 1681 1680 1598 1684 1566C1688 1535 1697 1474 1702 1431C1708 1388 1713 1352 1714 1350C1715 1347 1715 1413 1713 1612C1712 1676 1712 1760 1711 1800L1710 1874L1696 1874L1682 1874L1682 1878L1682 1881L1741 1881L1800 1880L1800 1877L1800 1874L1786 1874L1771 1874L1771 1581L1771 1288L1785 1288L1800 1288L1800 1284L1800 1280L1757 1280L1715 1280L1713 1290C1713 1294 1705 1350 1696 1413C1663 1663 1657 1703 1656 1704C1656 1704 1656 1704 1656 1703C1656 1702 1648 1645 1614 1384C1607 1331 1601 1285 1600 1283L1600 1280L1557 1280L1514 1280L1514 1284L1514 1288L1528 1288L1542 1288L1542 1581L1542 1874L1519 1874C1506 1874 1496 1874 1496 1873C1496 1873 1489 1823 1480 1762C1472 1701 1460 1613 1453 1566C1446 1519 1436 1442 1429 1395C1422 1348 1416 1303 1415 1296C1414 1288 1413 1281 1412 1281C1412 1279 1373 1280 1372 1281C1372 1282 1369 1302 1321 1654C1304 1773 1291 1871 1290 1872C1290 1874 1290 1874 1277 1874L1265 1874L1265 1878L1265 1881L1298 1881L1331 1881L1331 1878ZM1329 1642C1330 1638 1352 1474 1362 1400C1364 1386 1366 1375 1366 1375C1366 1375 1368 1389 1371 1406C1380 1474 1403 1641 1403 1643L1404 1646L1366 1646L1329 1646L1329 1642Z");
+ const items=PD.map((c,i)=>{const p=document.createElementNS(NS,'path');p.setAttribute('d',c.d);p.setAttribute('fill','none');p.setAttribute('stroke',BL);p.setAttribute('stroke-width','1.4');p.setAttribute('vector-effect','non-scaling-stroke');gL.append(p);
+  const len=p.getTotalLength();p.style.strokeDasharray=len;p.style.strokeDashoffset=len;return {i,p,len,a:c.a,shown:0}});
+ const st={done:false,raf:0,tm:[]};live=st;
+ st.kill=()=>{st.done=true;cancelAnimationFrame(st.raf);st.tm.forEach(clearTimeout);ov.remove();H.classList.remove('pv-on')};
+ function anchorAt(x,y,z,hin,hout){const g=document.createElementNS(NS,'g');const s=8/z;
+  [hin,hout].forEach(h=>{if(!h)return;const l=document.createElementNS(NS,'line');l.setAttribute('x1',x);l.setAttribute('y1',y);l.setAttribute('x2',h[0]);l.setAttribute('y2',h[1]);l.setAttribute('stroke',BL);l.setAttribute('vector-effect','non-scaling-stroke');const c=document.createElementNS(NS,'circle');c.setAttribute('cx',h[0]);c.setAttribute('cy',h[1]);c.setAttribute('r',3.4/z);c.setAttribute('fill',BL);g.append(l,c)});
+  const q=document.createElementNS(NS,'rect');q.setAttribute('x',x-s/2);q.setAttribute('y',y-s/2);q.setAttribute('width',s);q.setAttribute('height',s);q.setAttribute('fill','#fff');q.setAttribute('stroke',BL);q.setAttribute('vector-effect','non-scaling-stroke');g.append(q);gA.append(g);return g}
+ // 펜툴 인트로: 정면에서 점을 강하게 찍고 → I를 따라 기울어진 카메라로 질주 → 위에서 멈칫 → 휘감아 내려오며 줌아웃
+ const C={in:420,click:420,go:700,i1:2000};C.zs=C.i1;C.ze=C.zs+1300;C.fill=C.ze+300;C.drop=C.fill+550;C.out=C.drop+900;
+ const I=items.find(o=>{const b=o.p.getBBox();return b.x<20&&b.width<100&&b.height>500});
+ const others=items.filter(o=>o!==I);
+ // I의 꼭짓점을 시계방향, 왼쪽 아래부터
+ const P=[];I.a.forEach(q=>{const l=P[P.length-1];if(!l||Math.hypot(q[0]-l[0],q[1]-l[1])>12)P.push([q[0],q[1]])});
+ let A2=0;for(let m=0;m<P.length;m++){const p=P[m],q=P[(m+1)%P.length];A2+=p[0]*q[1]-q[0]*p[1]}if(A2<0)P.reverse();
+ let s0=0;P.forEach((p,m)=>{if(p[1]-p[0]*.3>P[s0][1]-P[s0][0]*.3)s0=m});P.push(...P.splice(0,s0));
+ const CP=P,N=CP.length,cum=[0];for(let m=0;m<N;m++){const a=CP[m],b=CP[(m+1)%N];cum.push(cum[m]+Math.hypot(b[0]-a[0],b[1]-a[1]))}const LT=cum[N];
+ const ys=CP.map(p=>p[1]),y0=Math.min(...ys);let tA=1,tB=N-1;for(let m=1;m<N;m++)if(CP[m][1]<y0+40){tA=m;break}for(let m=N-1;m>0;m--)if(CP[m][1]<y0+40){tB=m;break}
+ const sA=cum[tA],sB=cum[tB];
+ // 시간 → 거리: 출발 가속, 위에서 느리게, 내려올 땐 휘몰아치듯
+ const K=[[C.go,0,null],[C.go+560,sA,x=>x<.7?Math.pow(x/.7,2.2)*.82:.82+.18*(1-Math.pow(1-(x-.7)/.3,2))],[C.go+560+380,sB,x=>x],[C.i1,LT,x=>Math.pow(x,1.8)]];
+ const distAt=t=>{if(t<=K[0][0])return 0;for(let m=1;m<K.length;m++)if(t<=K[m][0]){const a=K[m-1],b=K[m];return a[1]+(b[1]-a[1])*b[2]((t-a[0])/(b[0]-a[0]))}return LT};
+ const ptAt=s=>{let n=1;while(n<N&&cum[n]<=s)n++;const a=CP[n-1],b=CP[n%N],e=(s-cum[n-1])/((cum[n]-cum[n-1])||1);return [a[0]+(b[0]-a[0])*e,a[1]+(b[1]-a[1])*e,n]};
+ const ln=document.createElementNS(NS,'path');ln.setAttribute('fill','none');ln.setAttribute('stroke',BL);ln.setAttribute('stroke-width','1.8');ln.setAttribute('vector-effect','non-scaling-stroke');gA.before(ln);I.p.style.opacity='0';I.ln=ln;
+ const hits=[];const punch=(x,y,z,big)=>{const g=anchorAt(x,y,z,null,null);g.style.transformBox='fill-box';g.style.transformOrigin='center';g.animate([{transform:'scale(0)'},{transform:`scale(${big?2.4:1.7})`,offset:.45},{transform:'scale(1)'}],{duration:big?420:300,easing:'cubic-bezier(.2,.8,.2,1)'});
+  const rp=document.createElementNS(NS,'circle');rp.setAttribute('cx',x);rp.setAttribute('cy',y);rp.setAttribute('fill','none');rp.setAttribute('stroke',BL);rp.setAttribute('vector-effect','non-scaling-stroke');gA.append(rp);hits.push({rp,t0:performance.now(),big});return g};
+ let zoom=RM?1:3.4,shown=0,shake=0,fx=CP[0][0],fy=CP[0][1],px=CP[0][0],py=CP[0][1]-260,dropY=0,dropV=0,ended=false;
+ items.forEach(o=>{o.p.style.strokeDashoffset=o.len});gL.style.opacity='1';
+ ov.querySelector('.skip').onclick=()=>end(true);
+ const t0=performance.now();
+ function step(now){if(st.done)return;const t=now-t0;const r=ti.getBoundingClientRect(),k=r.width/1800;
+  const lerp=(a,b,u)=>a+(b-a)*u,cl=x=>Math.max(0,Math.min(1,x)),sm=x=>{x=cl(x);return x*x*(3-2*x)};
+  const zp=cl((t-C.zs)/(C.ze-C.zs));const ze=zp<.5?4*zp*zp*zp:1-Math.pow(-2*zp+2,3)/2;
+  // 구도: 단계마다 확대, 화면 속 펜 위치, 각도가 확 바뀜
+  const snap=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+  const eOut=x=>1-Math.pow(1-cl(x),4),eIO=x=>{x=cl(x);return x<.5?8*x*x*x*x:1-Math.pow(-2*x+2,4)/2};
+  // 구도 3번: ①출발하며 확 꺾임(빠르게 꺾이고 천천히 안착) ②위에서 천천히 돌아섬 ③줌아웃하며 정면
+  const SH=[[0,{z:4.4,fx:.5,fy:.5,rx:0,ry:0,rz:0}],[C.go,{z:2.9,fx:.4,fy:.64,rx:14,ry:-26,rz:-6},560,K[1][2]],[C.go+560,{z:4.2,fx:.6,fy:.4,rx:-8,ry:24,rz:6},380,eIO],[C.zs,{z:1,fx:.5,fy:.5,rx:0,ry:0,rz:0}]];
+  let cam0=SH[0][1];for(let m=1;m<SH.length;m++){const a=SH[m-1][1],b=SH[m][1],ts=SH[m][0];if(t>=ts){const e=m===SH.length-1?ze:SH[m][3]((t-ts)/SH[m][2]);cam0={};for(const k2 in b)cam0[k2]=a[k2]+(b[k2]-a[k2])*e;SH[m][2]=cam0}}
+  const CAM=cam0;let z=RM?1:(t<C.zs?CAM.z:1+(SH[2][1].z-1)*(1-ze));
+  // 펜
+  if(t<C.in){const u=cl(t/C.in),e=1-Math.pow(1-u,3);px=CP[0][0];py=lerp(CP[0][1]-260,CP[0][1],e)}
+  else if(t<C.go){px=CP[0][0];py=CP[0][1];if(shown<1){shown=1;punch(CP[0][0],CP[0][1],k*z,true);shake=1}}
+  else if(t<C.i1+40){const d=distAt(t),[x,y,n]=ptAt(d);px=x;py=y;
+   while(shown<n){const big=shown===tA||shown===tB;punch(CP[shown][0],CP[shown][1],k*z,false);if(big)shake=Math.max(shake,.5);shown++}
+   let dd=`M${CP[0]}`;for(let m=1;m<n;m++)dd+=` L${CP[m]}`;dd+=` L${px},${py}`;ln.setAttribute('d',dd)}
+  else{if(!I.closed){I.closed=1;ln.setAttribute('d',`M${CP.join(' L')} Z`)}px=lerp(px,1700,.04);py=lerp(py,1950,.04)}
+  // 클릭 충격: 줌이 살짝 튀고 화면이 흔들림
+  shake*=.88;z*=1+.07*shake;
+  hits.forEach(h=>{const a=(now-h.t0)/(h.big?600:420);h.rp.setAttribute('r',(h.big?46:26)*E.o(cl(a))/(k*z));h.rp.style.opacity=String(Math.max(0,1-a));if(a>1&&h.rp.isConnected)h.rp.remove()});
+  // 나머지 글자
+  if(t>C.zs+150){if(!gL._ord){gL._ord=1;const n=others.length;others.map(o=>({o,b:o.p.getBBox()})).sort((p,q)=>(Math.round(p.b.y/250)-Math.round(q.b.y/250))||(p.b.x-q.b.x)).forEach((e,k)=>{e.o.d0=k/(n-1)*800})}
+   }
+  {const sc=k*z;others.forEach(o=>{const u=o.d0===undefined?0:cl((t-C.zs-150-o.d0)/480);const L=o.len*sc;o.p.style.strokeDasharray=L+' '+(L+10);o.p.style.strokeDashoffset=L*(1-E.o(u));o.p.style.opacity=u>0?'1':'0'})}
+  if(t>C.i1)gA.style.opacity=String(Math.max(0,1-(t-C.i1)/400));
+  // 카메라 위치: 펜을 따라감 (빠를수록 살짝 늦게)
+  if(t<C.zs){fx+=(px-fx)*.22;fy+=(py-fy)*.22}
+  const cw=innerWidth,ch=innerHeight,s=k*z;const jx=Math.sin(now/23)*shake*6,jy=Math.cos(now/19)*shake*6;
+  const zx=cw*(CAM.fx)-fx*s+jx,zy=ch*(CAM.fy)-fy*s+jy;
+  const tx=t<C.zs?zx:zx*(1-ze)+r.left*ze,ty=t<C.zs?zy:zy*(1-ze)+r.top*ze;cam.setAttribute('transform',`translate(${tx},${ty}) scale(${s})`);
+  grid.style.backgroundSize=`${40*z}px ${40*z}px`;grid.style.backgroundPosition=`${tx}px ${ty}px`;
+  // 카메라 앵글: 정면 → 올라갈 때 기울어짐 → 위에서 반대로 → 줌아웃하며 정면으로
+  const rx=CAM.rx,ry=CAM.ry,rz=CAM.rz;
+  stg.style.transformOrigin=`${cw/2}px ${ch/2}px`;stg.style.transform=RM?'':`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg)`;
+  anc.forEach(g=>{g.querySelectorAll('rect').forEach(q=>{const sz=8/(k*z);const x=+q.getAttribute('x')+(+q.getAttribute('width'))/2,y=+q.getAttribute('y')+(+q.getAttribute('height'))/2;q.setAttribute('x',x-sz/2);q.setAttribute('y',y-sz/2);q.setAttribute('width',sz);q.setAttribute('height',sz)})});
+  const psize=1+(z-1)*1.1;const sx=tx+px*s,sy=ty+py*s;
+  if(t>C.fill)fill.setAttribute('opacity',String(Math.min(1,(t-C.fill)/320)));
+  if(t>C.drop-300&&t<=C.drop){dropY=-18*Math.sin((t-C.drop+300)/300*Math.PI/2)}
+  if(t>C.drop){if(!ended){ended=true;reveal()}dropV+=2.2;dropY+=dropV}
+  pen.style.transform=`translate(${sx}px,${sy+dropY}px) scale(${psize})`;
+  if(t<C.out+400)st.raf=requestAnimationFrame(step);else end(false);}
+ const anc=[];const _aa=anchorAt;anchorAt=(x,y,z,a,b)=>{const g=_aa(x,y,z,a,b);anc.push(g);return g};
+ function reveal(){ // 현재 표지 등장 모션을 다시 재생
+  H.classList.add('pv-keep');H.classList.remove('pv-on');const h=document.querySelector('.fx-hero');if(h){h.classList.remove('fx-anim');void h.offsetWidth;h.classList.add('fx-anim');}
+  ov.style.backgroundColor='transparent';grid.style.opacity='0';
+  st.tm.push(setTimeout(()=>H.classList.remove('pv-keep'),2600));st.tm.push(setTimeout(()=>{fill.style.transition='opacity .5s';fill.style.opacity='0';if(I.ln){I.ln.style.transition='opacity .7s .3s';I.ln.style.opacity='0'}gL.style.transition='opacity .7s .3s';gL.style.opacity='0'},500));}
+ function end(skip){if(st.done)return;if(skip&&!ended){ended=true;reveal()}st.done=true;cancelAnimationFrame(st.raf);ov.style.transition='opacity .4s';ov.style.opacity='0';st.tm.push(setTimeout(()=>{ov.remove();H.classList.remove('pv-on')},450))}
+ st.raf=requestAnimationFrame(step);
+}
+window.__penVideo=play;
+addEventListener('hashchange',()=>{if(live&&!live.done&&location.hash&&location.hash!=='#/'){live.kill();document.querySelectorAll('.pv,.pv-pre').forEach(e=>e.remove());H.classList.remove('pv-on','pv-keep')}});
+const pre=document.createElement('div');pre.className='pv-pre';pre.setAttribute('aria-hidden','true');
+function wait(){if(document.querySelector('.fx-hero .fx-type img'))setTimeout(play,60);else setTimeout(wait,60)}
+const seen=false;
+if(!RM&&(!location.hash||location.hash==='#/')&&!seen){document.body.append(pre);H.classList.add('pv-on');wait();}
+})();
+</script>
+<style>
+.s4-el{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.s4-el:not(.s4-in){opacity:0;transform:translateY(28px)}
+.s4-el.s4-up:not(.s4-in){transform:translateY(-28px)}
+@media (prefers-reduced-motion:reduce){.s4-el:not(.s4-in){opacity:1;transform:none}}
+</style>
+<script>
+(function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;let io=null,els=[];
+function off(){if(io)io.disconnect();els.forEach(e=>{e.classList.remove('s4-el','s4-in');e.style.transitionDelay=''});els=[]}
+function on(){off();if(location.hash&&location.hash!=='#/')return;
+ document.querySelectorAll('main .fx-intro, main .ch').forEach(s=>{[...s.querySelectorAll('h2, p, img, .wrap > *')].slice(0,8).forEach((e,i)=>{if(!els.includes(e)&&!e.closest('.flow-tr, .car-tr, .wd-layer, .wd-hd, .wd-more, .wd-cap')){e.classList.add('s4-el');e.style.transitionDelay=(i*.08)+'s';els.push(e)}})});
+ const fl=document.querySelector('main .flow');if(fl&&!els.includes(fl)){fl.classList.add('s4-el');els.push(fl)}
+ io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('s4-in');else{e.target.classList.toggle('s4-up',e.boundingClientRect.top<0);e.target.classList.remove('s4-in')}}),{threshold:.15});els.forEach(e=>io.observe(e))}
+function wait(n){if(document.querySelector('main .ch'))on();else if(n<60)setTimeout(()=>wait(n+1),100)}
+addEventListener('hashchange',()=>setTimeout(()=>wait(0),50));wait(0);
+})();
+</script>
+<style>
+html.wd-on .fx-intro{position:relative;overflow:visible!important}
+html.wd-on .fx-intro::before{display:none!important}
+html.wd-on .fx-intro .wd-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
+html.wd-on .fx-intro .fx-in2{height:100%;padding-top:0;padding-bottom:0;position:relative;z-index:2;will-change:transform,opacity}
+html.wd-on main .ch-dark{display:none}
+@media (max-width:767px){html.wd-on .fx-intro .fx-in2{align-content:start;gap:16px;padding-top:84px!important}html.wd-on .fx-intro .fx-poster img{max-height:26vh;width:auto!important;margin:0 auto;display:block}html.wd-on .fx-intro .fx-con p{font-size:13.5px;line-height:1.65;margin-top:10px}}
+.wd-hd{position:absolute;left:0;right:0;z-index:4;margin:0 auto!important;max-width:none!important;text-align:center!important;color:#fff;opacity:0;pointer-events:none}
+.wd-more{position:absolute;left:0;right:0;z-index:5;margin:0 auto!important;text-align:center!important;color:#fff;opacity:0;pointer-events:none}
+.wd-layer{position:absolute;inset:0;pointer-events:none;perspective:2400px;perspective-origin:50% 45%;transform-style:preserve-3d}
+.wd-layer.bk{z-index:1}.wd-layer.fr{z-index:3}
+.wd-c{position:absolute;left:0;top:0;background:#111;box-shadow:0 16px 40px rgba(0,0,0,.35);backface-visibility:visible}
+.wd-c img{position:absolute;inset:0;display:block;width:100%!important;height:100%!important;max-height:none!important;object-fit:cover}
+.wd-c .sh{position:absolute;inset:0;background:#000;opacity:0}
+.wd-c.big{pointer-events:auto;cursor:pointer}
+.wd-cap{position:absolute;left:16px;right:16px;text-align:center;color:#fff;opacity:0;pointer-events:none;z-index:4}
+.wd-cap b{display:block;font:500 20px/1.4 "Noto Sans KR",sans-serif;letter-spacing:-.01em;color:#f2f2f2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wd-cap span{display:flex;justify-content:center;gap:12px;margin-top:6px;font:400 15px/1.5 "Noto Sans KR",sans-serif;color:#b9b9bd}
+.wd-cap span i{font-style:normal}.wd-cap span i:first-child{color:#c9c9cd}
+@media (max-width:767px){.wd-cap b{font-size:17px}}
+.wd-ar{position:absolute;transform:none!important;margin:0!important;z-index:5;width:48px;height:48px;display:grid;place-items:center;padding:0;border:0;background:none;color:#c9c9cc;cursor:pointer;opacity:0;pointer-events:none;transition:color .2s}
+.wd-ar:hover,.wd-ar:focus-visible{color:#e8622c}
+.wd-ar:focus-visible{outline:1px solid #e8622c;outline-offset:2px}
+.wd-ar svg{width:26px;height:26px}
+.wd-ar.wd-prev{left:calc(50% - 300px)}.wd-ar.wd-next{right:calc(50% - 300px)}
+@media (max-width:767px){.wd-ar.wd-prev{left:var(--gut)}.wd-ar.wd-next{right:var(--gut)}.wd-cap{left:72px;right:72px}}
+</style>
+<script>
+(function(){
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+const H=document.documentElement,cl=x=>Math.max(0,Math.min(1,x)),sm=x=>{x=cl(x);return x*x*(3-2*x)},lerp=(a,b,u)=>a+(b-a)*u,PI=Math.PI;
+let raf=0,S=null,PATH=null,PW=0,PH=0;
+// 스크롤 구간(화면 높이 단위): 감기 0~2.6, 창 전환 2.2~3.2, 3.5부터는 그냥 다음 파트로 내려감
+const A0=2.6,T0=2.2,T1=3.2,HOLD=3.5,AUTO=3200;
+function setup(){const intro=document.querySelector('main .fx-intro');if(!intro||intro.querySelector('.wd-sticky'))return!!intro;
+ const in2=intro.querySelector('.fx-in2');
+ const st=document.createElement('div');st.className='wd-sticky';in2.before(st);
+ const bk=document.createElement('div');bk.className='wd-layer bk';bk.setAttribute('aria-hidden','true');
+ const fr=document.createElement('div');fr.className='wd-layer fr';fr.setAttribute('aria-hidden','true');
+ st.append(bk,in2,fr);
+ const cap=document.createElement('div');cap.className='wd-cap';cap.setAttribute('aria-live','polite');st.append(cap);
+ // Works 제목과 버튼은 기존 Works 파트와 같은 모양으로, 작품 위아래에 배치
+ const src=document.querySelector('main .ch-dark');const hd=document.createElement('header');hd.className='ch-hd wd-hd';hd.innerHTML='<h2 class="ch-t">Works</h2>';
+ const more=document.createElement('div');more.className='ch-more wd-more';more.innerHTML=(src&&src.querySelector('.ch-more'))?src.querySelector('.ch-more').innerHTML:'<a href="#/grade/1">전시작품 보기</a>';st.append(hd,more);
+ const arw=d=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
+ const pv=document.createElement('button');pv.type='button';pv.className='wd-ar wd-prev';pv.setAttribute('aria-label','이전 작품');pv.innerHTML=arw('M15 5l-7 7 7 7');
+ const nx=document.createElement('button');nx.type='button';nx.className='wd-ar wd-next';nx.setAttribute('aria-label','다음 작품');nx.innerHTML=arw('M9 5l7 7-7 7');st.append(pv,nx);
+ const SUB={card:'1학년 카드뉴스',ad:'1학년 광고 디자인',ci:'2학년 CI 디자인',ill:'2학년 캐릭터 일러스트',inf:'2학년 인포그래픽',char:'3학년 캐릭터 제작',int:'3학년 실내 디자인'};
+ const name=id=>{const s=STUDENTS.find(x=>x.id===id);return s?s.name:''};
+ const order=['card','ad','ci','ill','inf','char','int'];
+ const feat=WORKS.slice().sort((a,b)=>order.indexOf(a.subject)-order.indexOf(b.subject));
+ const cards=feat.map((w,i)=>{const c=document.createElement('div');c.className='wd-c';c.innerHTML=`<img src="${w.sq.replace('sq.jpg','tn.jpg')}" alt="" decoding="async"><span class="sh"></span>`;bk.append(c);c.onclick=()=>location.hash='#/work/'+w.id;return{el:c,w,f:i,lay:bk}});
+ S={hd,more,intro,st,in2,bk,fr,cards,feat,cap,SUB,name,lastF:-1,cur:0,tgt:0,last:performance.now(),hov:false,pv,nx};intro.style.height=(HOLD+1)*100+'vh';
+ const go=n=>{S.tgt+=n;S.last=performance.now()};pv.onclick=()=>go(-1);nx.onclick=()=>go(1);
+ st.addEventListener('pointerover',e=>{if(e.target.closest('.wd-c.big,.wd-ar'))S.hov=true});st.addEventListener('pointerout',e=>{if(e.target.closest('.wd-c.big,.wd-ar'))S.hov=false});H.classList.add('wd-on');return true}
+// 경로: 위에서 들어와 → 포스터와 글을 크게 한 바퀴 반 감고 → 가운데로 좁혀지며 비스듬히 아래로 빠져나감
+function build(vw,vh,cw){const mob=vw<768,R0=mob?vw*.62:Math.min(vw*.46,900),T=(mob?20:13)*PI/180,z0=-R0*.45;
+ // 앞쪽 띠는 소개 글 아래로 지나가도록 높이를 맞춤
+ const con=S.in2.querySelector('.fx-con')||S.in2,tb=con.getBoundingClientRect().bottom-S.st.getBoundingClientRect().top+vh*.75*(S.a2||0);
+ const fy=Math.min(vh-cw*1.414*.62,Math.max(vh*.6,tb+cw*1.414*.5+18)),cy=fy-R0*Math.sin(T);
+ // 들어올 때처럼 내려갈 때도 감기면서 부드럽게: 위에서 내려와(π→1.5π) 한 바퀴 돌고(→3π) 바로 감기며 내려감(→4π)
+ const pt=th=>{let yl,R=R0;
+  if(th<1.5*PI){const u=sm((th-PI)/(.5*PI));yl=lerp(-vh*1.05,0,u)}
+  else if(th<3*PI){yl=vh*.03*(th-1.5*PI)/(1.5*PI)}
+  else{const u=(th-3*PI)/PI,e=u*u*(3-2*u)*.6+u*u*.4;yl=lerp(vh*.03,vh*.42,e);R=lerp(R0,R0*.42,sm(u))}
+  const x=R*Math.sin(th),z=R*Math.cos(th);return{x:vw/2+x,y:cy+yl+z*Math.sin(T),z:z0+z*Math.cos(T),ry:th*180/PI,T,rz:0}};
+ const P=[];for(let th=PI;th<=4*PI+1e-6;th+=PI/360)P.push(pt(th));
+ const e=P[P.length-1],SL=-26*PI/180,st=vh*.012;let px=e.x,py=e.y;
+ for(let k=1;k<=200;k++){const u=sm(k/40),a=SL*u;px+=-Math.sin(a)*st;py+=Math.cos(a)*st;P.push({x:px,y:py,z:e.z+k*1.5,ry:e.ry,T:e.T*(1-u),rz:SL*180/PI*u})}
+ let d=0;P[0].d=0;for(let i=1;i<P.length;i++){const a=P[i-1],b=P[i];d+=Math.hypot(b.x-a.x,b.y-a.y,b.z-a.z);b.d=d}
+ PATH={P,L:d,mob};PW=vw;PH=vh}
+function at(d){const P=PATH.P;
+ if(d<=0){const a=P[0];return{...a,y:a.y+d}}
+ if(d>=PATH.L){const a=P[P.length-2],b=P[P.length-1],k=(d-PATH.L)/(b.d-a.d);return{...b,x:b.x+(b.x-a.x)*k,y:b.y+(b.y-a.y)*k,z:b.z+(b.z-a.z)*k}}let lo=0,hi=P.length-1;while(hi-lo>1){const m=(lo+hi)>>1;if(P[m].d<d)lo=m;else hi=m}const a=P[lo],b=P[hi],u=(d-a.d)/(b.d-a.d||1);return{x:lerp(a.x,b.x,u),y:lerp(a.y,b.y,u),z:lerp(a.z,b.z,u),ry:lerp(a.ry,b.ry,u),T:lerp(a.T,b.T,u),rz:lerp(a.rz,b.rz,u)}}
+function frame(){raf=requestAnimationFrame(frame);if(!S||!S.intro.isConnected)return;
+ const {intro,in2,cards,feat,cap}=S;const r=intro.getBoundingClientRect(),vh=innerHeight,vw=innerWidth;
+ const cw=vw<768?Math.min(116,vw*.28):Math.min(156,vw*.092),gap=cw*1.03;
+ if(!PATH||PW!==vw||PH!==vh)build(vw,vh,cw);const mob=PATH.mob;
+ const sc=Math.max(0,-r.top/vh);
+ 
+ // 1) 감기: 위에서 흘러 들어온 띠가 포스터와 글을 감고, 비스듬히 아래로 빠짐 (전환 중에도 계속 흐름)
+ const D=sc/A0*PATH.L*.86;
+ // 2) 창 전환: 기존 화면이 위로 밀려 올라가고 작품이 크게 줄지어 섬
+ const a2=sm((sc-T0)/(T1-T0));
+ const Dx=D+sm((sc-T0+.1)/(T1-T0))*cards.length*gap*1.1;
+ in2.style.transform=`translateY(${-vh*.75*a2}px)`;in2.style.opacity=String(1-sm((sc-T0-.1)/.6));
+ // 3) 옆으로 넘기기: 스크롤과 상관없이 자동 재생, 화살표로 앞뒤 이동
+ const F=feat.length,now=performance.now(),inView=r.bottom>vh*.5&&a2>.95;
+ if(inView&&!S.hov&&!document.hidden&&now-S.last>AUTO){S.tgt++;S.last=now}
+ if(!inView)S.last=now;
+ S.cur+=(S.tgt-S.cur)*.09;if(Math.abs(S.tgt-S.cur)<.001)S.cur=S.tgt;
+ const fi=((Math.round(S.cur)%F)+F)%F;
+ const on=a2>.9;S.pv.style.opacity=S.nx.style.opacity=String(sm((a2-.85)/.15));S.pv.style.pointerEvents=S.nx.style.pointerEvents=on?'auto':'none';S.pv.tabIndex=S.nx.tabIndex=on?0:-1;
+ // 세로 배치: 헤더(Works) → 큰 작품 → 제목·이름 → 전시작품 보기
+ const navH=72,hdTop=navH+vh*.045,hdH=S.hd.offsetHeight||120,moreH=52,capH=mob?54:60;
+ const G1=mob?30:36,G2=mob?22:26,G3=mob?40:44;const avail=vh-(hdTop+hdH+G1)-(G2+capH+G3+moreH+vh*.05);const bigH=Math.max(160,Math.min(mob?vh*.42:vh*.5,avail)),bigW=bigH/1.414,SM=.62,g=mob?16:28;
+ const BY=hdTop+hdH+G1+bigH/2,capT=BY+bigH/2+G2,moreT=capT+capH+G3;
+ S.hd.style.top=hdTop+'px';S.cap.style.top=capT+'px';S.more.style.top=moreT+'px';S.pv.style.top=S.nx.style.top=(capT+(mob?4:6))+'px';
+ const ho=sm((a2-.75)/.25);S.hd.style.opacity=S.more.style.opacity=String(ho);S.hd.style.transform=S.more.style.transform=`translateY(${(1-ho)*24}px)`;S.more.style.pointerEvents=ho>.9?'auto':'none';S.hd.style.visibility=S.more.style.visibility=ho>.01?'':'hidden';S.cap.style.visibility=a2>.85?'':'hidden';S.pv.style.visibility=S.nx.style.visibility=a2>.85?'':'hidden';
+ // 가운데 큰 작품 옆으로 작은 작품이 바로 붙어 이어짐
+ const off=dd=>{const a=Math.abs(dd),sg=Math.sign(dd);const near=bigW/2+bigW*SM/2+g;return sg*(a<1?a*near:near+(a-1)*(bigW*SM+g))};
+ cards.forEach((c,k)=>{const el=c.el;const d=Dx-k*gap;let dd=c.f-S.cur;dd=((dd+F/2)%F+F)%F-F/2;
+  const onPath=d>0&&d<PATH.L+vh*1.2,inLine=Math.abs(dd)<(mob?3:6);
+  if(!(onPath&&a2<1)&&!(a2>0&&inLine)){if(el.style.display!=='none')el.style.display='none';return}
+  if(el.style.display==='none')el.style.display='';
+  const q=at(d);
+  let x=q.x,y=q.y,z=q.z,ry=q.ry,rx=-q.T*180/PI,rz=q.rz,w=cw,op=.22+.78*cl((Math.cos(q.ry*PI/180)+.15)/.6);
+  if(inLine&&a2>0){const big=cl(1-Math.abs(dd));
+   const bx=vw/2+off(dd),by=BY;
+   x=lerp(x,bx,a2);y=lerp(y,by,a2);z=lerp(z,-Math.abs(dd)*60,a2);ry=lerp(ry,Math.round(ry/360)*360+Math.max(-2,Math.min(2,dd))*-10,a2);rx=lerp(rx,0,a2);rz=lerp(rz,0,a2);
+   w=lerp(w,bigW*lerp(SM,1,big),a2);op=lerp(onPath?op:0,Math.max(.2,1-Math.abs(dd)*.22),a2)}
+  else op*=1-a2;
+  el.classList.toggle('big',a2>.9&&Math.abs(dd)<.5);
+  const hh=w*1.414;el.style.width=w+'px';el.style.height=hh+'px';el.style.opacity=String(op);
+  el.style.transform=`translate3d(${x-w/2}px,${y-hh/2}px,${z}px) rotateZ(${rz}deg) rotateX(${rx}deg) rotateY(${ry}deg)`;
+  const face=Math.cos(ry*PI/180);el.querySelector('.sh').style.opacity=String(Math.max(0,.35-face*.35)*(1-a2));
+  const want=(z>0||a2>.3)?S.fr:S.bk;if(c.lay!==want){want.append(el);c.lay=want}
+  el.style.zIndex=String(Math.round(z+3000-(a2>.3?Math.abs(dd)*10:0)))});
+ cap.style.opacity=String(sm((a2-.85)/.15));S.a2=a2;
+ if(fi!==S.lastF&&a2>.5){S.lastF=fi;const w=feat[fi];cap.innerHTML=`<b>${w.title}</b><span><i>${S.name(w.student)}</i></span>`}}
+function start(n){if(setup()){cancelAnimationFrame(raf);raf=requestAnimationFrame(frame)}else if(n<80)setTimeout(()=>start(n+1),120)}
+addEventListener('hashchange',()=>{S=null;H.classList.remove('wd-on');setTimeout(()=>start(0),300)});start(0);
+})();
 </script>
 </body>
 </html>
