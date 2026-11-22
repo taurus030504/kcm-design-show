@@ -631,7 +631,7 @@ html.lock,html.lock body{overflow:hidden}
 @media (max-width:640px){.ix-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .ix-p{font-size:13px;line-height:1.7}
 .ix-n{display:block;color:#fff;font-weight:700;font-size:14px;margin-bottom:2px}
-.ix-n small{font:500 11px/1 ui-monospace,Menlo,Consolas,monospace;color:#8d8d92;margin-right:6px}
+.ix-n small{font-size:inherit;font-weight:500;color:#8d8d92;margin-right:6px}
 .ix-n:hover{color:#ffb48f}
 .ix-w{display:block;color:#a9a9ae}.ix-w:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .pr-g{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:0;margin:40px 0 120px}
@@ -733,7 +733,7 @@ function stabs(cur){
 }
 function subHead(k,tag){
   const v=SUBJECTS[k];
-  return `<header class="shd"><p class="sk">${esc(GRADES[v.grade])} ${esc(v.course)}</p><${tag}>${esc(v.name)}</${tag}><p class="si">${v.intro.map(esc).join('<br>')}</p></header>`;
+  return `<header class="shd"><p class="sk">${esc(GRADES[v.grade])} ${esc(v.course)}</p><${tag}>${esc(v.name)}</${tag}></header>`;
 }
 const GINTRO={
   1:["1학년은 포토샵과 일러스트레이터를 이번에 처음 다뤄 봤습니다.","카드뉴스를 먼저 만들고, 이어서 실제 제품 광고를 만들었습니다."],
@@ -744,7 +744,7 @@ function sbHero(list,k,t,i){
   const bg=[...list,...list,...list].slice(0,12);
   return `<section class="sb-hero" aria-labelledby="sb-t">
       <div class="sb-bg" aria-hidden="true">${bg.map(w=>`<img src="${w.sq.replace('sq.jpg','tn.jpg')}" alt="" decoding="async">`).join('')}</div>
-      <div class="sb-in">${k?`<p class="sb-k">${esc(k)}</p>`:''}<h1 id="sb-t">${esc(t)}</h1><p class="sb-i">${i.map(esc).join('<br>')}</p></div>
+      <div class="sb-in">${k?`<p class="sb-k">${esc(k)}</p>`:''}<h1 id="sb-t">${esc(t)}</h1>${i&&i.length?`<p class="sb-i">${i.map(esc).join('<br>')}</p>`:''}</div>
     </section>`;
 }
 function gTabs(g,k){
@@ -777,7 +777,7 @@ function vGrade(g,sid){
 }
 function vSubject(k){
   const list=BYNO.filter(x=>x.subject===k), v=SUBJECTS[k];
-  return `${sbHero(list,GRADES[v.grade]+' '+v.course,v.name,v.intro)}
+  return `${sbHero(list,GRADES[v.grade]+' '+v.course,v.name,[])}
     ${gTabs(v.grade,k)}
     <div class="wrap">${list.length?`<ul class="grid">${list.map(card).join('')}</ul>`:`<p class="empty">준비 중</p>`}</div>`;
 }
@@ -1571,9 +1571,8 @@ w(0);addEventListener('hashchange',()=>{document.documentElement.classList.remov
 </style>
 <div class="shc" hidden role="dialog" aria-modal="true" aria-labelledby="shc-t"><div class="shc-in">
 <button class="shc-x" type="button">닫기</button>
-<h2 id="shc-t">공유 카드</h2>
-<img alt="작품 공유 카드 미리보기">
-<p>작품과 학생 이름, 과제전 이름이 함께 담긴 이미지예요. 카톡이나 인스타에 올려도 누구 작품인지 함께 보여요.</p>
+<h2 id="shc-t">공유</h2>
+<img alt="공유 이미지 미리보기">
 <div class="shc-b"><button class="pri" data-s="share" type="button">공유하기</button><button data-s="save" type="button">이미지 저장</button><button data-s="link" type="button">링크 복사</button></div>
 <div class="shc-msg" aria-live="polite"></div>
 </div></div>
