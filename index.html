@@ -770,7 +770,7 @@ function vGrade(g,sid){
     return `${sbHero(all,'',GRADES[g],GINTRO[g])}${gTabs(g)}${fbar(g,st)}
     <div class="wrap"><ul class="grid fgrid">${ws.map(w=>card(w,g)).join('')}</ul></div>${MV==='2'?idx(g):''}`;}
   const body=MV==='3'?`<div class="wrap">${pairs(g)}</div>`:`<div class="wrap">${subs.map(s=>{const v=SUBJECTS[s],list=BYNO.filter(x=>x.subject===s);
-      return `<section class="gs" id="g-${s}" aria-labelledby="gh-${s}"><header class="gs-h"><div><h2 id="gh-${s}">${esc(v.name)}</h2><p>${esc(v.course)}</p></div><a href="#/subject/${s}">과목 소개 보기</a></header>
+      return `<section class="gs" id="g-${s}" aria-labelledby="gh-${s}"><header class="gs-h"><div><h2 id="gh-${s}">${esc(v.name)}</h2><p>${esc(v.course)}</p></div></header>
       ${list.length?`<ul class="grid">${list.map(w=>card(w,g)).join('')}</ul>`:`<p class="empty">준비 중</p>`}</section>`}).join('')}</div>`;
   return `${sbHero(all,'',GRADES[g],GINTRO[g])}
     ${gTabs(g)}${body}${MV==='2'?idx(g):''}`;
