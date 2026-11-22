@@ -389,7 +389,7 @@ html.lock,html.lock body{overflow:hidden}
 
 .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);background:var(--ink);color:var(--bg);font-size:14px;font-weight:500;padding:12px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:30}
 .toast.on{opacity:1;transform:translate(-50%,0)}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 
 /* 작품 타일: 간격 없이 붙이고, 제목은 마우스를 올리면 */
 .grid{gap:0!important}
@@ -558,7 +558,8 @@ html.lock,html.lock body{overflow:hidden}
 .gd-sep{width:1px;height:120px;background:linear-gradient(#0c0c0c,#555,#0c0c0c);margin:80px auto}
 .gd-cr .gd-r{margin-top:56px}
 .gd-names{margin-top:14px;font-family:var(--kserif);font-size:22px;line-height:1.8;color:#fff}
-.gd-names.sm{font-size:16px;line-height:2;color:#cfcfcf;word-break:keep-all}
+.gd-names.sm{font-size:16px;line-height:2;color:#cfcfcf;word-break:keep-all;display:grid;grid-template-columns:repeat(auto-fit,4.6em);justify-content:center;column-gap:.9em;max-width:34em;margin-left:auto;margin-right:auto}
+.gd-names.sm span{white-space:nowrap;text-align:left}
 @media (max-width:767px){.gb,.gb.r{grid-template-columns:1fr}.gb.r .gb-im{order:0}.gb-im img{position:static;height:auto;aspect-ratio:4/5}.gb-tx{padding:56px var(--gut)}.ga-l{padding-top:72px}.gc-sc{height:76svh}.gc-sub{font-size:16px}}
 .gb-nm{font-family:var(--font);font-size:clamp(56px,7vw,112px);font-weight:300;line-height:.95;letter-spacing:-.02em}
 .gb-rl{margin:18px 0 64px;font-size:14px;color:var(--ink-3)}
@@ -755,7 +756,7 @@ const NO=s=>s.id.slice(1);
 function fbar(g,st){return `<div class="fbar wrap"><p><small>${NO(st)}</small><b>${esc(st.name)}</b>의 작품</p><a href="#/grade/${g}">${esc(GRADES[g])} 전체 보기</a></div>`}
 function idx(g){
   const sts=STUDENTS.filter(s=>s.grade==g).sort((x,y)=>x.id.localeCompare(y.id));
-  return `<section class="ix" aria-labelledby="ix-h"><div class="wrap"><h2 id="ix-h">${esc(GRADES[g])} 학생</h2>
+  return `<section class="ix" aria-label="${esc(GRADES[g])} 학생 목록"><div class="wrap">
     <div class="ix-g">${sts.map(s=>{const ws=BYNO.filter(w=>w.student===s.id);return `<div class="ix-p"><a class="ix-n" href="#/grade/${g}/${s.id}"><small>${NO(s)}</small>${esc(s.name)}</a>${ws.map(w=>`<a class="ix-w" href="#/work/${w.id}">${esc(w.title)}</a>`).join('')}</div>`}).join('')}</div></div></section>`;
 }
 function pairs(g){
@@ -859,7 +860,7 @@ function vGreet(){
   } else { /* 엔딩 크레딧 */
     out=`<div class="gd">${gs.map((g,i)=>`<article class="gd-p"><img src="${g.photo}" alt="${esc(g.role)} ${esc(g.name)}"><p class="gd-r">${esc(roleT(g))}</p><h2>${esc(g.name)}</h2><p class="gd-q">${esc(g.quote)}</p><div class="gd-b">${body(g)}</div></article>`).join('<div class="gd-sep" aria-hidden="true"></div>')}
       <div class="gd-sep" aria-hidden="true"></div>
-      <section class="gd-cr"><p class="gd-r">지도교사</p><p class="gd-names">${SHOW.teachers.map(esc).join('<br>')}</p>${[1,2,3].map(n=>`<p class="gd-r">${GRADES[n]}</p><p class="gd-names sm">${[...new Set(STUDENTS.filter(s=>s.grade==n).map(s=>s.name))].map(esc).join('&nbsp;&nbsp; ')}</p>`).join('')}</section></div>`;
+      <section class="gd-cr"><p class="gd-r">지도교사</p><p class="gd-names">${SHOW.teachers.map(esc).join('<br>')}</p>${[1,2,3].map(n=>`<p class="gd-r">${GRADES[n]}</p><p class="gd-names sm">${[...new Set(STUDENTS.filter(s=>s.grade==n).map(s=>s.name))].map(n=>`<span>${esc(n)}</span>`).join('')}</p>`).join('')}</section></div>`;
   }
   return `${gHead()}<div class="gw gw-${v}">${out}</div>`;
 }
@@ -1091,7 +1092,7 @@ html.cur-b .cu-d.hide{opacity:0}
 <div class="cu cu-o" aria-hidden="true"></div>
 <script>
 (function(){
-const H=document.documentElement,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const H=document.documentElement,RM=false;
 let CUR='a',MOT=true;
 /* ---------- 커서 ---------- */
 const _d=document.createElement('i'),ca=_d,cb=_d.cloneNode(),cd=_d.cloneNode(),cp=document.querySelector('.cu-p'),co=document.querySelector('.cu-o');let ox=-100,oy=-100;
@@ -1337,7 +1338,7 @@ html.wd-on main .ch-dark{display:none}
 </style>
 <script>
 (function(){
-if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+
 const H=document.documentElement,cl=x=>Math.max(0,Math.min(1,x)),sm=x=>{x=cl(x);return x*x*(3-2*x)},lerp=(a,b,u)=>a+(b-a)*u,PI=Math.PI;
 let raf=0,S=null,PATH=null,PW=0,PH=0;
 // 스크롤 구간(화면 높이 단위): 감기 0~2.6, 창 전환 2.2~3.2, 3.5부터는 그냥 다음 파트로 내려감
@@ -1481,7 +1482,7 @@ function setup(){
  if(fig.querySelector('.cl-wrap'))return true;
  fig.closest('.stack').style.overflow='visible';
  if(S){S.wrap.remove();cancelAnimationFrame(S.raf)}
- const pad=140,wrap=document.createElement('div');wrap.className='cl-wrap';if(matchMedia('(prefers-reduced-motion:reduce)').matches)return true;
+ const pad=140,wrap=document.createElement('div');wrap.className='cl-wrap';
  fig.style.position='relative';fig.append(wrap);img.classList.add('cl-hide');
  const cv=document.createElement('canvas');cv.className='cl-cv';wrap.append(cv);
  const hit=document.createElement('div');hit.className='cl-hit';wrap.append(hit);
@@ -1582,19 +1583,79 @@ const SUBN={card:'1학년 카드뉴스',ad:'1학년 광고 디자인',ci:'2학�
 const M=document.querySelector('.shc'),IM=M.querySelector('img'),MSG=M.querySelector('.shc-msg');let blob=null,cur=null,url='';
 const load=s=>new Promise((ok,no)=>{const i=new Image();i.onload=()=>ok(i);i.onerror=no;i.src=s});
 function wrap(c,t,max){const w=[...t];let line='',out=[];for(const ch of w){if(c.measureText(line+ch).width>max&&line){out.push(line);line=ch}else line+=ch}out.push(line);return out}
-async function card(wk){await document.fonts.ready;const st=STUDENTS.find(s=>s.id===wk.student)||{name:''};
- const W=1080,H=1350,c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');
- g.fillStyle='#f3efe8';g.fillRect(0,0,W,H);
- const im=await load(wk.pages[0]);const bx=80,by=80,bw=920,bh=820;const s=Math.min(bw/im.width,bh/im.height);const w=im.width*s,h=im.height*s,x=bx+(bw-w)/2,y=by+(bh-h)/2;
- g.save();g.shadowColor='rgba(20,24,60,.22)';g.shadowBlur=40;g.shadowOffsetY=18;g.fillStyle='#fff';g.fillRect(x,y,w,h);g.restore();g.drawImage(im,x,y,w,h);
- g.textBaseline='alphabetic';
- g.fillStyle='#1b1b1d';g.font='700 54px "Noto Sans KR",sans-serif';const L=wrap(g,wk.title,920).slice(0,2);L.forEach((l,i)=>g.fillText(l,80,1000+i*66));
- g.fillStyle='#55565c';g.font='500 32px "Noto Sans KR",sans-serif';g.fillText(st.name,80,1000+L.length*66+12);
- g.fillStyle='#1d2858';g.fillRect(0,1230,W,120);
- g.fillStyle='#fff';g.font='400 40px "Instrument Serif",Georgia,serif';g.fillText('Image Out, Draw the Dream',80,1300);
- g.font='500 22px "Noto Sans KR",sans-serif';g.fillStyle='rgba(255,255,255,.75)';g.fillText('제3회 과제전  2026.12.22',80,1332);
- g.textAlign='right';g.fillText('taurus030504.github.io/kcm-design-show',W-80,1332);g.textAlign='left';
- return await new Promise(r=>c.toBlob(r,'image/png'))}
+// 공유 카드 레이아웃 시안 4종: window.CARDV(wk, v) -> canvas
+
+function wrapT(g,t,max){let line='',out=[];for(const ch of [...t]){if(g.measureText(line+ch).width>max&&line){out.push(line);line=ch}else line+=ch}out.push(line);return out}
+const W=1080,H=1350,SITE='taurus030504.github.io/kcm-design-show';
+const KO='"Noto Sans KR","Noto Sans CJK KR",sans-serif',SE='"Instrument Serif",Georgia,serif';
+function fit(im,bw,bh){const s=Math.min(bw/im.width,bh/im.height);return [im.width*s,im.height*s]}
+window.CARDV=async function(wk,v){await document.fonts.ready;const st=STUDENTS.find(s=>s.id===wk.student)||{name:''};
+ const im=await load(wk.pages[0]);const c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');g.textBaseline='alphabetic';
+ if(v==='a'){ // 작품을 흐리게 깔고 가운데 크게, 글은 위에 흰색
+  const s=Math.max(W/im.width,H/im.height)*1.15;g.filter='blur(46px) brightness(.55) saturate(1.1)';g.drawImage(im,(W-im.width*s)/2,(H-im.height*s)/2,im.width*s,im.height*s);g.filter='none';
+  g.fillStyle='rgba(0,0,0,.18)';g.fillRect(0,0,W,H);
+  const [w,h]=fit(im,880,900);const x=(W-w)/2,y=80+(900-h)/2;g.save();g.shadowColor='rgba(0,0,0,.45)';g.shadowBlur=50;g.shadowOffsetY=24;g.fillRect(x,y,w,h);g.restore();g.drawImage(im,x,y,w,h);
+  g.fillStyle='#fff';g.font=`700 50px ${KO}`;const L=wrapT(g,wk.title,920).slice(0,2);const ty=1120;L.forEach((l,i)=>g.fillText(l,80,ty+i*62));
+  g.font=`500 30px ${KO}`;g.fillStyle='rgba(255,255,255,.85)';g.fillText(st.name,80,ty+L.length*62+8);
+  g.font=`400 30px ${SE}`;g.textAlign='right';g.fillStyle='rgba(255,255,255,.9)';g.fillText('Image Out, Draw the Dream',W-80,H-62);g.font=`500 20px ${KO}`;g.fillStyle='rgba(255,255,255,.7)';g.fillText('제3회 과제전  '+SITE,W-80,H-30);g.textAlign='left'}
+ else if(v==='b'){ // 전시장 벽 + 작품 라벨
+  g.fillStyle='#f4f3f0';g.fillRect(0,0,W,H);
+  const [w,h]=fit(im,900,1000);const x=(W-w)/2,y=70+(1000-h)/2;g.save();g.shadowColor='rgba(0,0,0,.22)';g.shadowBlur=26;g.shadowOffsetY=12;g.fillStyle='#fff';g.fillRect(x,y,w,h);g.restore();g.drawImage(im,x,y,w,h);
+  const lx=90,ly=1130;g.fillStyle='#1b1b1d';g.fillRect(lx,ly,2,150);
+  g.font=`700 40px ${KO}`;const L=wrapT(g,wk.title,560).slice(0,2);L.forEach((l,i)=>g.fillText(l,lx+28,ly+40+i*50));
+  g.font=`400 26px ${KO}`;g.fillStyle='#55565c';g.fillText(st.name,lx+28,ly+40+L.length*50+6);
+  g.textAlign='right';g.fillStyle='#1b1b1d';g.font=`400 34px ${SE}`;g.fillText('Image Out, Draw the Dream',W-90,ly+40);g.font=`500 20px ${KO}`;g.fillStyle='#6b6c72';g.fillText('제3회 과제전  2026.12.22',W-90,ly+76);g.fillText(SITE,W-90,ly+104);g.textAlign='left'}
+ else if(v==='c'){ // 어두운 전시실, 사이트와 같은 톤
+  g.fillStyle='#1f1f1f';g.fillRect(0,0,W,H);
+  g.fillStyle='#fff';g.font=`400 40px ${SE}`;g.fillText('Image Out, Draw the Dream',72,104);g.font=`500 20px ${KO}`;g.fillStyle='#e8622c';g.fillText('제3회 과제전',72,140);
+  const [w,h]=fit(im,936,900);const x=(W-w)/2,y=190+(900-h)/2;g.fillStyle='#fff';g.fillRect(x-10,y-10,w+20,h+20);g.drawImage(im,x,y,w,h);
+  g.fillStyle='#fff';g.font=`700 48px ${KO}`;const L=wrapT(g,wk.title,936).slice(0,2);const ty=y+h+96;L.forEach((l,i)=>g.fillText(l,72,Math.min(ty,1220)+i*58));
+  g.font=`500 28px ${KO}`;g.fillStyle='#b9b9bd';g.fillText(st.name,72,Math.min(ty,1220)+L.length*58+4);
+  g.textAlign='right';g.font=`500 20px ${KO}`;g.fillStyle='#8d8d92';g.fillText(SITE,W-72,H-40);g.textAlign='left'}
+ else { // d 작품 색 바탕 + 아래 흰 띠
+  g.fillStyle=wk.color||'#ddd';g.fillRect(0,0,W,1110);
+  const [w,h]=fit(im,880,950);const x=(W-w)/2,y=80+(950-h)/2;g.save();g.shadowColor='rgba(0,0,0,.28)';g.shadowBlur=36;g.shadowOffsetY=16;g.fillRect(x,y,w,h);g.restore();g.drawImage(im,x,y,w,h);
+  g.fillStyle='#fff';g.fillRect(0,1110,W,240);
+  g.fillStyle='#1b1b1d';g.font=`700 44px ${KO}`;const L=wrapT(g,wk.title,600).slice(0,2);L.forEach((l,i)=>g.fillText(l,72,1180+i*54));
+  g.font=`500 26px ${KO}`;g.fillStyle='#55565c';g.fillText(st.name,72,1180+L.length*54+6);
+  g.textAlign='right';g.fillStyle='#1b1b1d';g.font=`400 34px ${SE}`;g.fillText('Image Out, Draw the Dream',W-72,1180);g.font=`500 20px ${KO}`;g.fillStyle='#6b6c72';g.fillText('제3회 과제전  2026.12.22',W-72,1216);g.fillText(SITE,W-72,1244);g.textAlign='left'}
+ return c};
+window.CARDV2=async function(wk,v){await document.fonts.ready;const st=STUDENTS.find(s=>s.id===wk.student)||{name:''};
+ const im=await load(wk.pages[0]);const c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');g.textBaseline='alphabetic';
+ const SUB={card:'카드뉴스',ad:'광고 디자인',ci:'CI 디자인',ill:'캐릭터 일러스트',inf:'인포그래픽',char:'캐릭터 제작',int:'실내 디자인'};
+ if(v==='e'){ // 펜툴로 고른 아트보드
+  g.fillStyle='#fff';g.fillRect(0,0,W,H);g.strokeStyle='#eceef3';g.lineWidth=1;for(let x=0;x<W;x+=40){g.beginPath();g.moveTo(x+.5,0);g.lineTo(x+.5,H);g.stroke()}for(let y=0;y<H;y+=40){g.beginPath();g.moveTo(0,y+.5);g.lineTo(W,y+.5);g.stroke()}
+  const [w,h]=fit(im,860,860);const x=(W-w)/2,y=150+(860-h)/2;g.drawImage(im,x,y,w,h);
+  g.strokeStyle='#3d6cff';g.lineWidth=3;g.strokeRect(x,y,w,h);g.fillStyle='#fff';[[x,y],[x+w/2,y],[x+w,y],[x,y+h/2],[x+w,y+h/2],[x,y+h],[x+w/2,y+h],[x+w,y+h]].forEach(([a,b])=>{g.fillRect(a-9,b-9,18,18);g.strokeRect(a-9,b-9,18,18)});
+  g.fillStyle='#3d6cff';g.font=`500 24px ${KO}`;g.fillText(`${st.name}_${wk.title}`.slice(0,34),x,y-22);
+  g.fillStyle='#111';g.font=`400 64px ${SE}`;g.fillText('Image Out,',72,1160);g.fillText('Draw the Dream',72,1226);
+  g.textAlign='right';g.font=`700 34px ${KO}`;g.fillText(st.name,W-72,1160);g.font=`500 22px ${KO}`;g.fillStyle='#6b6c72';g.fillText('제3회 과제전 2026.12.22',W-72,1200);g.fillText(SITE,W-72,1230);g.textAlign='left'}
+ else if(v==='f'){ // 전시 입장권
+  g.fillStyle='#e8622c';g.fillRect(0,0,W,H);const tx=70,ty=70,tw=W-140,th=H-140;g.fillStyle='#fff';g.fillRect(tx,ty,tw,th);
+  const cut=ty+th-260;g.fillStyle='#e8622c';g.beginPath();g.arc(tx,cut,26,0,Math.PI*2);g.fill();g.beginPath();g.arc(tx+tw,cut,26,0,Math.PI*2);g.fill();
+  g.strokeStyle='#c9c9cc';g.setLineDash([10,10]);g.lineWidth=2;g.beginPath();g.moveTo(tx+40,cut);g.lineTo(tx+tw-40,cut);g.stroke();g.setLineDash([]);
+  const bw=tw-80,bh=cut-ty-80;const s=Math.max(bw/im.width,bh/im.height);g.save();g.beginPath();g.rect(tx+40,ty+40,bw,bh);g.clip();g.drawImage(im,tx+40+(bw-im.width*s)/2,ty+40+(bh-im.height*s)*.2,im.width*s,im.height*s);g.restore();
+  g.fillStyle='#111';g.font=`700 44px ${KO}`;g.fillText(wrapT(g,wk.title,600)[0],tx+40,cut+80);g.font=`500 28px ${KO}`;g.fillStyle='#55565c';g.fillText(st.name+'   '+(SUB[wk.subject]||''),tx+40,cut+124);
+  g.fillStyle='#111';g.font=`400 30px ${SE}`;g.fillText('Image Out, Draw the Dream',tx+40,cut+196);
+  g.textAlign='right';g.font=`400 78px ${SE}`;g.fillText('12.22',tx+tw-40,cut+110);g.font=`500 22px ${KO}`;g.fillStyle='#55565c';g.fillText('제3회 과제전  동두천시평생교육원',tx+tw-40,cut+152);g.fillText(SITE,tx+tw-40,cut+196);g.textAlign='left'}
+ else if(v==='g'){ // 잡지 표지
+  const s=Math.max(W/im.width,H/im.height);g.drawImage(im,(W-im.width*s)/2,(H-im.height*s)*.35,im.width*s,im.height*s);
+  const gr=g.createLinearGradient(0,0,0,H);gr.addColorStop(0,'rgba(0,0,0,.88)');gr.addColorStop(.12,'rgba(0,0,0,.7)');gr.addColorStop(.26,'rgba(0,0,0,0)');gr.addColorStop(.6,'rgba(0,0,0,0)');gr.addColorStop(.8,'rgba(0,0,0,.6)');gr.addColorStop(1,'rgba(0,0,0,.88)');g.fillStyle=gr;g.fillRect(0,0,W,H);
+  const lg=await load('img/logo_image.png');const lh=110,lw=lg.width*lh/lg.height;g.filter='invert(1)';g.drawImage(lg,60,50,lw,lh);g.filter='none';
+  g.fillStyle='#fff';g.font=`500 22px ${KO}`;g.textAlign='right';g.fillText('제3회 과제전',W-60,80);g.fillText('2026.12.22',W-60,110);g.textAlign='left';
+  g.font=`400 34px ${SE}`;g.fillText('Out, Draw the Dream',60+lw+18,150);
+  g.font=`700 58px ${KO}`;const L=wrapT(g,wk.title,940).slice(0,2);const by=H-80-L.length*68-50;L.forEach((l,i)=>g.fillText(l,60,by+i*68));
+  g.font=`500 30px ${KO}`;g.fillStyle='rgba(255,255,255,.9)';g.fillText(st.name,60,by+L.length*68+4);g.font=`500 20px ${KO}`;g.fillStyle='rgba(255,255,255,.7)';g.textAlign='right';g.fillText(SITE,W-60,H-50);g.textAlign='left'}
+ else { // h 큰 글자 뒤 작품
+  g.fillStyle='#f3efe8';g.fillRect(0,0,W,H);g.fillStyle='#1d2858';g.font=`400 330px ${SE}`;g.fillText('Image',40,330);g.fillText('Out,',40,620);
+  const [w,h]=fit(im,560,820);const x=W-70-w,y=260;g.save();g.shadowColor='rgba(20,24,60,.3)';g.shadowBlur=30;g.shadowOffsetY=14;g.fillRect(x,y,w,h);g.restore();g.drawImage(im,x,y,w,h);
+  g.fillStyle='#e8622c';g.font=`400 64px ${SE}`;g.fillText('Draw the Dream',60,y+h+120>1200?1150:y+h+110);
+  g.fillStyle='#1b1b1d';g.font=`700 40px ${KO}`;const L=wrapT(g,wk.title,600).slice(0,2);L.forEach((l,i)=>g.fillText(l,60,1240+i*48-(L.length-1)*48));g.font=`500 26px ${KO}`;g.fillStyle='#55565c';g.fillText(st.name,60,1290);
+  g.textAlign='right';g.font=`500 20px ${KO}`;g.fillText('제3회 과제전  '+SITE,W-70,1290);g.textAlign='left'}
+ return c};
+
+
+async function card(wk){const c=await window.CARDV2(wk,'g');return await new Promise(r=>c.toBlob(r,'image/png'))}
 async function open(wk){cur=wk;url=location.href;MSG.textContent='카드를 만드는 중이에요';M.hidden=false;IM.removeAttribute('src');
  try{blob=await card(wk);IM.src=URL.createObjectURL(blob);MSG.textContent=''}catch(e){MSG.textContent='카드를 만들지 못했어요. 링크 복사를 이용해 주세요.'}
  M.querySelector('.shc-b .pri').focus()}
